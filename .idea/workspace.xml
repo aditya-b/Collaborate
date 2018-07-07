@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/forms/signup_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/forms/signup_form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user_apis.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user_apis.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="113" column="44" selection-start-line="113" selection-start-column="44" selection-end-line="113" selection-end-column="44" />
+            <state relative-caret-position="408">
+              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -52,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form_add_group.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form_add_group.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -130,11 +127,11 @@
         <option value="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" />
         <option value="$PROJECT_DIR$/Collaborate/settings.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/signup.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/forms/signup_form.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" />
       </list>
     </option>
   </component>
@@ -617,20 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="113" column="44" selection-start-line="113" selection-start-column="44" selection-end-line="113" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="114" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/login_form.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -638,10 +621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/file_form.py">
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="51">
+          <caret line="3" column="237" selection-start-line="3" selection-start-column="237" selection-end-line="3" selection-end-column="237" />
         </state>
       </provider>
     </entry>
@@ -652,10 +635,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html">
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/file_form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="237" selection-start-line="3" selection-start-column="237" selection-end-line="3" selection-end-column="237" />
+        <state relative-caret-position="102">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="114" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
         </state>
       </provider>
     </entry>

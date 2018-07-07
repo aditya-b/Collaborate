@@ -26,16 +26,20 @@ class GetUserDetails(APIView):
 class AddUser(APIView):
     def post(self,request, *args, **kwargs):
         try:
-            user = User.objects.create_user(last_name=request.POST['last_name'], first_name=request.POST['first_name'],
+            user = User.objects.get(email=request.POST['email'])
+            return JsonResponse({'message': 'User with this email already exists!'}, status=404)
+        except ObjectDoesNotExist:
+            try:
+                user = User.objects.create_user(last_name=request.POST['last_name'], first_name=request.POST['first_name'],
                                             email=request.POST['email'], username=request.POST['username'],
                                             password=request.POST['password'])
-            user.save()
-            group = Group(name=request.POST['username']+'_Personal')
-            group.save()
-            group.user_set.add(user)
-            return JsonResponse({'message': 'Success'}, status=201)
-        except IntegrityError:
-            return JsonResponse({'message': 'User exists'}, status=404)
+                user.save()
+                group = Group(name=request.POST['username']+'_Personal')
+                group.save()
+                group.user_set.add(user)
+                return JsonResponse({'message': 'Success'}, status=201)
+            except IntegrityError:
+                return JsonResponse({'message': 'User exists'}, status=404)
 
 
 class ChangePassword(APIView):
