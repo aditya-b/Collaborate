@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block javascript %}
+<script>
+    var host_url = window.location.protocol + '//' + window.location.hostname;
+    var port = window.location.port;
+    if(port)
+        host_url += ':' + window.location.port;
+    function signup()
+    {
+        $.ajax({
+            url: host_url + "{% url 'collaborate:add_user' %}",
+            type:'POST',
+            data: {
+                'email': document.getElementById('id_email').value,
+                'last_name': document.getElementById('id_last_name').value,
+                'first_name': document.getElementById('id_first_name').value,
+                'password': document.getElementById('id_password').value,
+                'username': document.getElementById('id_username').value
+            },
+            dataType: 'json',
+            success:function(response){
+                alert('User registered successfully!');
+                window.location.replace("{% url 'collaborate:home' %}");
+            },
+            error:function(error){
+                console.log(error);
+                alert(error.responseJSON['message']);
+            }
+        })
+    }
+</script>
+{% endblock %}
+{% block content %}
+    {% if errors %}
+    <div class="alert alert-danger">
+        <strong>{{errors}}</strong>
+    </div>
+    {% else %}
+    {% endif %}
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <center><h2 style="color:skyblue"></h2></center>
+        <div class="panel panel-info" style="margin-top:20px;">
+            <div class="panel-heading">Register</div>
+            <div class="panel-body">
+        <form method="post" style="padding:15px;width:75%;margin-left:10%" onsubmit="return false">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{form.first_name.id_for_label}}">First Name:</label>
+                {{form.first_name}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.last_word.id_for_label}}">Last Name:</label>
+                {{form.last_name}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.last_word.id_for_label}}">Email:</label>
+                {{form.email}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.username.id_for_label}}">Username:</label>
+                {{form.username}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.password.id_for_label}}">Password:</label>
+                {{form.password}}
+            </div>
+            <center><input type="submit" class="btn btn-success" value="Register" onclick="signup()">&emsp14;
+                <a href="{% url 'collaborate:login' %}" class="btn btn-info">Login</a></center>
+        </form>
+        </div>
+        </div>
+    </div>
+{% endblock %}

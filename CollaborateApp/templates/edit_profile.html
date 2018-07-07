@@ -1,0 +1,21 @@
+<center><h3 style="color:orange;font-family:cursive;"><b>Edit Profile</b></h3><br><br>
+<form onsubmit="return false" id="change_password_form">
+    <table style="width:50%;">
+        <tr>
+            <td style="padding:10px;"><label for="first_name">First Name:</label></td>
+            <td style="padding:10px;"><input type="text" required class="form-control form_text" id="first_name" placeholder="First Name" value="{{ first_name }}" minlength="8"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="padding:10px;"><label for="last_name">Last Name:</label></td>
+            <td style="padding:10px;"><input type="text" required class="form-control form_text" id="last_name" placeholder="Last Name" value="{{ last_name }}" minlength="8"></td>
+        </tr>
+        <tr>
+            <td style="padding:10px;"><label for="email">Last Name:</label></td>
+            <td style="padding:10px;"><input type="email" required class="form-control form_text" id="email" placeholder="Email" value="{{ email }}" minlength="8"></td>
+        </tr>
+    </table><br>
+    <input type="submit" id="change_password_button" class="btn btn-success" value="Edit Profile" style="margin-left:10px;" onclick="change_password()">
+    <h5 id="pass_ack" style="display:inline;margin-left:20px;"><b></b></h5>
+</form>
+</center>

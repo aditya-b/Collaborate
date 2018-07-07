@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="img-div" style="color:white;display:table;max-width:100%;min-width:100%;background-color:rgba(0,0,0,0.6); height:410px">
+    <img id='img' src="{% static 'imgs/home.jpeg' %}" style="position:absolute;z-index:-1; max-height:410px; max-width:100%; object-fit:scale-down;" >
+    <div style="display:table-cell;vertical-align:middle;">
+        <center>
+            <b style="font:50px sans-serif;">
+                Many hands make light work
+            </b><br><br>
+            <span style="font:20px sans-serif;width:30%;"> Build better ideas by sharing them with your team or group.<br>
+                Collaborate on projects with your coworkers, whether they're in the office or working remotely. <br>
+                Stay flexible while keeping in control by tracking your document from ideation to publication from anywhere.
+            </span><br>
+        </center>
+    </div>
+</div>
+<div class="container" style="margin-top:30px;">
+    <div class="col-md-7">
+        <img src="{% static 'imgs/foot.png' %}" style="max-width:100%; width:auto; height:auto">
+    </div>
+    <div class="col-md-5" style="display:table; height:500px;" >
+        <div style="display:table-cell; vertical-align:middle;">
+            <h1 style="color:green; font-family: cursive; font-size:65px;"><b>Make real work happen</b></h1>
+            <h3 style="color:grey;font-family: sans-serif;line-height:120%;">
+                Bring your workplace online, along with your team. When you have to write a python script, draft a text document,
+                code in C or Java, and many more, Collaborate gives you all the aid! We have you covered. Create, code, and share
+                your files online in the most secure environment.
+            </h3>
+        </div>
+    </div>
+
+</div>
+<div class="container" style="margin-top:30px;text-align:center;">
+    <h2 style="font-family:cursive; color: skyblue"><b>Why Collaborate?</b></h2><br>
+    <div class="col-md-3 jumbotron" style="text-align:center; height:450px;">
+        <img src="{% static 'imgs/group.png' %}" style="max-width:60%; height:auto; width:auto;"><br>
+        <h3><b>Groups</b></h3><br>
+        <p>
+            Bring your teams online and share files to the users in the group.
+        </p>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3 jumbotron" style="text-align:center;height:450px;">
+        <img src="{% static 'imgs/secure.png' %}" style="max-width:60%; height:auto; width:auto;"><br>
+        <h3><b>Secure</b></h3><br>
+        <p>
+            Give access only to users of a group and maintain personal files seperately.
+        </p>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3 jumbotron" style="text-align:center;height:450px;">
+        <img src="{% static 'imgs/updown.png' %}" style="max-width:60%; height:auto; width:auto;"><br>
+        <h3><b>Manage Files</b></h3><br>
+        <p>
+            Upload and download your files with ease.
+        </p>
+    </div>
+    <!--<div class="col-md-3 jumbotron" style="text-align:center;height:450px;">-->
+        <!--<img src="{% static 'imgs/run.png' %}" style="max-width:60%; height:auto; width:auto;"><br>-->
+        <!--<h3><b>Execute</b></h3><br>-->
+        <!--<p>-->
+            <!--Execute python code online and modify code according to need.-->
+        <!--</p>-->
+    <!--</div>-->
+    <!--<div class="col-md-1"></div>-->
+    <div class="col-md-3 jumbotron" style="text-align:center;height:450px;">
+        <img src="{% static 'imgs/lang.png' %}" style="max-width:60%; height:auto; width:auto;"><br>
+        <h3><b>Language Support</b></h3><br>
+        <p>
+            Supports editing of vast number of file types (.txt, .py, .html, .c, etc.).
+        </p>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3 jumbotron" style="text-align:center;height:450px;">
+        <img src="{% static 'imgs/ui.png' %}" style="max-width:60%; height:auto; width:auto;"><br>
+        <h3><b>Friendly UI</b></h3><br>
+        <p>
+            User friendly UI that makes uploading files and other tasks easy.
+        </p>
+    </div>
+</div>
+<div class="container" style="background-color:black; padding:20px; height:auto; width:100%;">
+    <div class="col-md-1">
+        <a href="{% url 'collaborate:home' %}"><img src="{% static 'imgs/collaborate_logo.png' %}" height="100%" width="100%" style="display:inline"/></a>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <span style="color:darkgrey;"><b>Support:</b></span><br><br>
+        <form style="width:70%" onsubmit="return false">
+            <input type="text" class="form-control" placeholder="Email"><br>
+            <textarea class="form-control" placeholder="Message here" style="resize:none"></textarea><br>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+    <div class="col-md-3">
+        <a href="#" class="menu_nav"><b>About Us</b></a><br><br>
+        <a href="#" class="menu_nav"><b>FAQ?</b></a><br><br>
+        <a href="#" class="menu_nav"><b>Terms & Conditions</b></a><br><br>
+        <a href="#" class="menu_nav"><b>Privacy</b></a><br><br>
+        <a href="#" class="menu_nav"><b>Help</b></a><br><br>
+    </div>
+    <div class="col-md-3">
+        <span style="color:darkgrey;"><b>Mail us at:</b></span><br>
+        <span style="color:darkgrey;">support@collaborate.com</span><br><br>
+        <span style="color:darkgrey;"><b>Call us at:</b></span><br>
+        <span style="color:darkgrey;">+916302456187</span><br>
+        <span style="color:darkgrey;">+916302456188</span><br><br>
+        <span style="color:darkgrey;"><b>Follow us on:</b></span><br><br>
+        <a href="#"><img src="{% static 'imgs/fb.png' %}" height="30px" width="30px"></a>&emsp14;&emsp14;&emsp14;
+        <a href="#"><img src="{% static 'imgs/twitter.png' %}" height="30px" width="30px"></a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block javascript %}
+    <script>
+        var host_url = window.location.protocol + '//' + window.location.hostname;
+        var port = window.location.port;
+        if(port)
+            host_url += ':' + window.location.port;
+        function send_email()
+        {
+            var ack = document.getElementById('email_ack');
+            ack.style.color = 'skyblue';
+            ack.innerHTML  = '<b>Sending email...</b>';
+            $.ajax({
+                url: host_url + "{% url 'collaborate:send_reset_code' %}",
+                    type:'GET',
+                    data: { 'email': document.getElementById('forgot_password_email').value },
+                    dataType: 'json',
+                    success:function(response){
+                        ack.style.color = 'green';
+                        ack.innerHTML  = response['message'];
+                        document.getElementById('reset_password_form').style.display = 'block';
+                        document.getElementById('verify_email_button').setAttribute('disabled','true');
+                        document.getElementById('forgot_password_email').setAttribute('disabled','true');
+                    },
+                    error:function(error){
+                        ack.style.color = 'red';
+                        ack.innerHTML  = error.responseJSON['message'];
+                    }
+
+            })
+        }
+        function check_match()
+        {
+            var password1 = document.getElementById('new_password').value;
+            var password2 = document.getElementById('confirm_password').value;
+            var ack = document.getElementById('password_match').style;
+            var submit_button = document.getElementById('reset_password_button');
+            if(password1 == password2)
+            {
+                ack.display = 'none';
+                submit_button.removeAttribute('disabled');
+            }
+            else
+            {
+                ack.display = 'table-cell';
+                submit_button.setAttribute('disabled','true');
+            }
+        }
+        function reset_password()
+        {
+            var ack = document.getElementById('pass_ack');
+            ack.style.color = 'skyblue';
+            ack.innerHTML  = '<b>Resetting password...</b>';
+            $.ajax({
+                url: host_url + "{% url 'collaborate:reset_password' %}",
+                    type:'GET',
+                    data: {
+                        'email': document.getElementById('forgot_password_email').value,
+                        'password': document.getElementById('new_password').value,
+                        'reset_code': document.getElementById('reset_code').value
+                     },
+                    dataType: 'json',
+                    success:function(response){
+                        reset_form();
+                        ack.style.color = 'green';
+                        ack.innerHTML  = response['message'];
+                        ack.style.display = 'block';
+                    },
+                    error:function(error){
+                        ack.style.color = 'red';
+                        ack.innerHTML  = error.responseJSON['message'];
+                        ack.style.display = 'block';
+                    }
+
+            })
+            return false;
+        }
+        function reset_form()
+        {
+            document.getElementById('reset_password_form').style.display = 'none';
+            document.getElementById('verify_email_button').removeAttribute('disabled');
+            document.getElementById('forgot_password_email').removeAttribute('disabled');
+            document.getElementById('forgot_password_email').value = '';
+            document.getElementById('reset_code').value = '';
+            document.getElementById('new_password').value = '';
+            document.getElementById('confirm_password').value = '';
+            document.getElementById('password_match').style.display = 'none';
+            document.getElementById('pass_ack').style.display = 'none';
+            document.getElementById('email_ack').style.display = 'none';
+        }
+    </script>
+{% endblock %}
+{% block content %}
+    {% if message %}
+    <div class="alert alert-danger">
+        <strong>{{message}}</strong>
+    </div>
+    {% else %}
+    {% endif %}
+    <div class="col-md-3"></div>
+    <div class="col-md-6" style="margin-top:30px;">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Login
+            </div>
+            <div class="panel-body">
+        <form method="post" style="padding:15px;width:75%;margin-left:10%">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{form.username.id_for_label}}">Username:</label>
+                {{form.username}}
+            </div>
+            <div class="form-group" id="noedit">
+                <label for="{{form.password.id_for_label}}">Password:</label>
+                {{form.password}}
+            </div>
+            <center>
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Forgot Password?</button><br>
+                <input type="submit" class="btn btn-success" value="Login">&emsp14;
+                <a href="{% url 'collaborate:signup' %}" class="btn btn-info">Register</a>
+            </center>
+        </form>
+            </div>
+        </div>
+    </div>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" onclick="reset_form()">&times;</button>
+        <h4 class="modal-title">Reset Password</h4>
+      </div>
+      <div class="modal-body">
+          <form onsubmit="return false" id="verify_email_form" style="padding:10px">
+              <label for="forgot_password_email" class="form_label">Email: </label>
+              <input type="email" required class="form-control form_text" placeholder="Email" id="forgot_password_email" style="width:50%" minlength="8"><br><br>
+              <input type="submit" class="btn btn-success" value="Verify Email" id="verify_email_button" onclick="send_email()">
+              <h5 id="email_ack" style="display:inline;margin-left:20px;"><b></b></h5>
+          </form>
+          <br>
+          <form onsubmit="return reset_password()" id="reset_password_form" style="display:none;">
+              <table>
+                  <tr>
+                      <td style="padding:10px;"><label for="reset_code">Reset Code:</label></td>
+                      <td style="padding:10px;"><input type="text" required class="form-control" id="reset_code" placeholder="XXXXX" pattern="[0-9]{5}" maxlength="5" minlength="5"></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td style="padding:10px;"><label for="new_password">New Password:</label></td>
+                      <td style="padding:10px;"><input type="password" required class="form-control form_text" id="new_password" placeholder="New Password" onkeyup="check_match()" autocomplete="off" minlength="8"></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td style="padding:10px;"><label for="confirm_password">Confirm Password:</label></td>
+                      <td style="padding:10px;">
+                          <input type="password" required class="form-control form_text" id="confirm_password" placeholder="Confirm Password" onkeyup="check_match()" autocomplete="off" minlength="8">
+                      </td>
+                      <td style="display:none;" id="password_match"><h5 style="color:red;"><b>Passwords do not match</b></h5></td>
+                  </tr>
+              </table>
+              <input type="submit" id="reset_password_button" class="btn btn-success" value="Reset Password" style="margin-left:10px;" disabled onclick="return reset_password()">
+          </form>
+          <h5 id="pass_ack" style="display:inline;margin-left:20px;"><b></b></h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="reset_form()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

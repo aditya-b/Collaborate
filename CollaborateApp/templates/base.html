@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static 'imgs/collaborate_logo.png' %}" />
+    <title>Collaborate
+        {% if request.user.is_authenticated %}
+            - {{ request.user.last_name}}
+        {% endif %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'lib/codemirror.css' %}">
+    <script src="{% static 'lib/codemirror.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{% static 'lib/jquery_transport.js' %}"></script>
+    <style>
+
+        a.menu_nav, a.menu_nav:visited, a.menu_nav:link
+        {
+            color:darkgrey;
+            text-decoration:none;
+        }
+        a.menu_nav:hover, a.menu_nav:active
+        {
+            color:white;
+            text-decoration:none;
+        }
+        a.home_nav
+        {
+            color:white;
+            text-decoration:none;
+        }
+        .intro
+        {
+            border-radius:10px;
+            padding:20px;
+            color:white;
+        }
+        ul.groups li
+        {
+            margin-left:10px;
+            padding:10px;
+            cursor:pointer;
+            display:block;
+        }
+        ul.files li
+        {
+            margin-left:5px;
+            padding:5px;
+            cursor:pointer;
+            display:block;
+        }
+        .CodeMirror
+        {
+            border: 1px solid green;
+            box-shadow:0px 0px 5px green;
+            height:500px;
+        }
+        .CodeMirror-focused
+        {
+            border: 1px solid red;
+            box-shadow:0px 0px 5px red;
+        }
+        a.utility_nav
+        {
+            text-decoration:none;
+            cursor:pointer;
+        }
+        label.form_label,input.form_text
+        {
+            display:inline;
+            margin-right:15px;
+        }
+        .load {
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+    </style>
+    {% block javascript %}
+    {% endblock %}
+</head>
+<body onloadeddata="close_loader()">
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-responsive" style="border-radius:0px;min-width:100%;max-height:55px;">
+        <div class="navbar-header">
+            <a href="{% url 'collaborate:home' %}" style="text-decoration:none;">
+                <div class="navbar-brand">
+                    <img src="{% static 'imgs/collaborate_logo.png' %}" height="30px" width="40px" style="display:inline"/>
+                    Collaborate
+                </div>
+            </a>
+        </div>
+        {% if request.user.is_authenticated %}
+            <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
+                <li><a href="{% url 'collaborate:home' %}"><span class="glyphicon glyphicon-home"></span> Home </a> </li>
+                <li><a href="{% url 'collaborate:ui_workspace_groups' username=request.user.username %}">{{ request.user.first_name }} {{ request.user.last_name }}</a></li>
+                <li><a href="{% url 'collaborate:logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+        {% else %}
+        <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
+            <li><a href="{% url 'collaborate:home' %}"><span class="glyphicon glyphicon-home"></span> Home </a> </li>
+            <li><a href="{% url 'collaborate:signup' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+            <li><a href="{% url 'collaborate:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        {% endif %}
+    </div>
+    <div style="margin-top:50px;width:100%;">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

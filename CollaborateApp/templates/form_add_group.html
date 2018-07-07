@@ -1,0 +1,7 @@
+<form method="post" action="{% url 'collaborate:add_group'%}">
+    {% csrf_token %}
+    <label for="group_name">Name: </label>
+    <input required type="text" class="form-control input-sm" name="group_name" style="margin-bottom:10px;" pattern="[A-Za-z0-9_]{6,}" title="Must be of minimum 6 characters. Cannot use spaces. Only _ can be used" placeholder="Do not use spaces">
+    <input type="submit" class="btn btn-success btn-sm" value="Create Group">
+    <a class="btn btn-danger btn-sm" onclick="close_group()">Cancel</a>
+</form>

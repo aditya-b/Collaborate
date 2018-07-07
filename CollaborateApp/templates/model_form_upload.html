@@ -1,0 +1,8 @@
+<h5><b>Uploading file to "{{ name }}"</b></h5>
+<form method="post" enctype="multipart/form-data" action="{% url 'collaborate:file_form' groupid=id%}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success btn-sm">Upload</button>
+    <button class="btn btn-danger btn-sm" onclick="close_upload()">Cancel</button>
+</form>
+<h6><b><u>Note:</u></b> Uploading a file with existing files' name will <b style="color:red">overwrite</b> existing file!</h6>
