@@ -12,7 +12,7 @@
         var first_name = document.getElementById('id_first_name').value;
         var password = document.getElementById('id_password').value;
         var username = document.getElementById('id_username').value;
-        if(email.length>7 && last_name.length>7 && first_name.length>7 && password.length >7 && username.length >7)
+        if(email.length>8 && last_name.length>3 && first_name.length>3 && password.length >7 && username.length >5)
         {
         $.ajax({
             url: host_url + "{% url 'collaborate:add_user' %}",

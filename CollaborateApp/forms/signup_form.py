@@ -5,17 +5,17 @@ class SignupForm(forms.Form):
     first_name=forms.CharField(
         max_length=20,
         required=True,
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name', 'required': 'true', 'minlength': '8'})
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name', 'required': 'true', 'minlength': '4'})
     )
     last_name = forms.CharField(
         max_length=20,
         required=True,
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name', 'required': 'true', 'minlength': '8'})
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name', 'required': 'true', 'minlength': '4'})
     )
     username = forms.CharField(
         max_length=20,
         required=True,
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username', 'required': 'true', 'minlength': '8'})
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username', 'required': 'true', 'minlength': '6'})
     )
     password = forms.CharField(
         max_length=20,
