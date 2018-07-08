@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/userhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/userhome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/view_groups.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/view_groups.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,56 +24,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user_apis.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/signup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="114" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file_form.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/file_form.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change_password.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/change_password.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_add_group.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="237" selection-start-line="3" selection-start-column="237" selection-end-line="3" selection-end-column="237" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="signup_form.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/signup_form.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="54">
               <caret line="17" column="125" selection-start-line="17" selection-start-column="125" selection-end-line="17" selection-end-column="125" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_profile.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+              <folding>
+                <element signature="n#style#0;n#h3#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#center#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="work_area.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="616" column="62" selection-start-line="616" selection-start-column="62" selection-end-line="616" selection-end-column="62" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#h5#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_groups.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/view_groups.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="40" selection-start-column="40" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,33 +117,33 @@
         <option value="$PROJECT_DIR$/CollaborateApp/serializers/group_Serializers.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/form_group_add_user.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/Sample.html" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/userhome.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/serializers/user_serializers.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/group_apis.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/static/lib/utilities.js" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/home.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/models.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/views/authentication.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/forms/login_form.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/login.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/urls.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/base.html" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/view_groups.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/views/displayviews.py" />
         <option value="$PROJECT_DIR$/Collaborate/strorage_backends.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Collaborate/storage_backends.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/views/files.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" />
         <option value="$PROJECT_DIR$/Collaborate/settings.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/signup.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/forms/signup_form.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/home.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/base.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/signup.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/login.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/userhome.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/view_groups.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html" />
       </list>
     </option>
   </component>
@@ -273,7 +285,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32843137" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32843137" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32843137" />
       <window_info id="Structure" order="1" sideWeight="0.5054348" side_tool="true" weight="0.14806548" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32843137" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -289,21 +301,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49635038" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" sideWeight="0.50364965" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32843137" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32843137" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32843137" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
@@ -447,13 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/userhome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/static/lib/utilities.js" />
     <entry file="file://C:/Pre Summer Assignments/Assignment5.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -481,27 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="65" column="39" lean-forward="true" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="176" selection-start-line="5" selection-start-column="176" selection-end-line="5" selection-end-column="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="145" column="164" selection-start-line="145" selection-start-column="164" selection-end-line="145" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/serializers/user_serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -509,24 +493,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/view_groups.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -551,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Collaborate/storage_backends.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -569,13 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="479" selection-start-line="479" selection-end-line="479" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9010">
-          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -607,13 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/signup_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="125" selection-start-line="17" selection-start-column="125" selection-end-line="17" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/login_form.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -621,17 +570,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html">
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="237" selection-start-line="3" selection-start-column="237" selection-end-line="3" selection-end-column="237" />
+          <caret line="105" column="77" lean-forward="true" selection-start-line="105" selection-start-column="77" selection-end-line="105" selection-end-column="77" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/change_password.html">
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        <state relative-caret-position="1394">
+          <caret line="82" column="106" selection-start-line="82" selection-start-column="106" selection-end-line="82" selection-end-column="106" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#center#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#center#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h3#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h3#0;n#div#2;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h3#0;n#div#4;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#4;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h3#0;n#div#5;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#5;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h3#0;n#div#7;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#7;n#div#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -644,8 +612,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="114" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
+        <state relative-caret-position="102">
+          <caret line="51" column="68" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -653,6 +625,113 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="126" column="75" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/change_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="81" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="127" selection-start-line="1" selection-start-column="127" selection-end-line="1" selection-end-column="127" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#h5#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#1;n#h6#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/userhome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/signup_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="17" column="125" selection-start-line="17" selection-start-column="125" selection-end-line="17" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="616" column="62" selection-start-line="616" selection-start-column="62" selection-end-line="616" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h5#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/view_groups.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#center#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

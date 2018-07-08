@@ -1,8 +1,8 @@
-<center><h2 style="font-family:cursive; color:orange;">{{ request.user }}'s Groups</h2></center><br>
-<div style="text-align:center;">
+<center><h2 style="font-family:Comfortaa; color:orange;">{{ request.user }}'s Groups</h2></center><br>
+<div style="text-align:center; font-family:Khula">
     {% for group in groups %}
         <div class="panel panel-primary" id="group_panel_{{ group.id }}">
-            <div class="panel-heading">
+            <div class="panel-heading" style="font-family:Comfortaa">
                 <b>{{ group.name|split|last }}</b>
                 <a style="float:right;margin-right:10px;cursor:pointer;color:white" onclick="delete_group({{ group.id }})">
                     <span class="glyphicon glyphicon-trash small"></span>

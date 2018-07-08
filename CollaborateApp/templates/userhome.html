@@ -1,19 +1,19 @@
 {% load static %}
-<center><h2 style="font-family:cursive; color:grey;">{{ request.user }}'s Work Space</h2></center><br>
-<div>
+<center><h2 style="font-family:Comfortaa; color:grey;">{{ request.user }}'s Work Space</h2></center><br>
+<div style="font-family:Khula">
     <div class="col-md-6">
         <div class="jumbotron intro" style="background:#448AFF;">
-            <h5><b>Groups:</b></h5>Groups correspond to teams that you can create or someone else can add you. You can add users
+            <h5><b style="font-family:Comfortaa">Groups:</b></h5>Groups correspond to teams that you can create or someone else can add you. You can add users
             to the group by their username. You can search them under the user search if you are unaware of their username.The
             tabs correspond to various groups that you belong to. You can access a group by clicking on it.<br>
         </div>
         <div class="jumbotron intro" style="background:#00BFA5;">
-            <h5><b>Files:</b></h5> Click on the group name to open the files that belong to that group. Click on a file to open it
+            <h5><b style="font-family:Comfortaa">Files:</b></h5> Click on the group name to open the files that belong to that group. Click on a file to open it
             in the editor. Files in a group are restricted to the users of the group ad cannot be accessed by someone not belonging
             to the group. To ensure security, check before you add a user to the group.<br>
         </div>
         <div class="jumbotron intro" style="background:#FF9100;">
-            <h5><b>Personal Files:</b></h5> All your personal files are stored in <strong>{{ request.user }}_Personal</strong> and can be accessed only
+            <h5><b style="font-family:Comfortaa">Personal Files:</b></h5> All your personal files are stored in <strong>{{ request.user }}_Personal</strong> and can be accessed only
             by you. To share with your group, you can upload the file into your group and the file can be deleted from your personal files
             (not suggested for important files as group files can be edited, deleted and accessed by any user of the group).
         </div>

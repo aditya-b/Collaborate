@@ -557,13 +557,13 @@
         }
     </script>
 {% endblock %}
-<div class="col-md-3">
+<div class="col-md-3" style="font-family:Khula">
     <div class="panel panel-primary" style="margin-top:20px;">
-    <div class="panel-heading">
+    <div class="panel-heading" style="font-family:Comfortaa">
         <a onclick="load_home()" style="cursor:pointer;" class="home_nav"><span class="glyphicon glyphicon-home" style="float:left;"></span>&nbsp;&nbsp; My Home </a>
     </div>
     <div class="panel-body">
-        <b style="color:#448AFF;">GROUPS</b>
+        <b style="color:#448AFF;font-family:Comfortaa; ">GROUPS</b>
         <ul class="list-unstyled groups">
             {% for group in groups %}
                 <li id="group_nav_{{ group.id }}">
@@ -583,7 +583,7 @@
         </ul>
         <br><br>
         {% if personal %}
-        <b onclick="load_files({{ personal.id }},0)" style="color:#00BFA5;padding-bottom:10px;cursor:pointer;width:auto;" id="nav_{{ personal.id }}">
+        <b onclick="load_files({{ personal.id }},0)" style="color:#00BFA5;padding-bottom:10px;cursor:pointer;width:auto;font-family:Comfortaa" id="nav_{{ personal.id }}">
             {{ personal.name }}
         </b>
         <span class="glyphicon glyphicon-refresh small loads" style="float:right;margin-right:10px;cursor:pointer;" onclick="load_files({{ personal.id }},1)" id="group_loader_{{ personal.id }}"></span>
@@ -594,19 +594,19 @@
     </div>
     </div>
     <div class="panel panel-warning" id="upload_panel" style="display:none;">
-        <div class="panel-heading"><b>Upload File</b></div>
-        <div class="panel-body" id="upload_form">
+        <div class="panel-heading"><b style="font-family:Comfortaa">Upload File</b></div>
+        <div class="panel-body" id="upload_form" style="font-family:Khula">
         </div>
     </div>
     <div class="panel panel-info">
         <div class="panel-heading"><b>Utilities</b></div>
         <div class="panel-body">
-            <h5><b style="color:#448AFF;">GROUPS:</b></h5>
+            <h5><b style="color:#448AFF;font-family:Comfortaa">GROUPS:</b></h5>
             <ul class="list-unstyled" style="line-height:2;margin-left:20px;">
                 <li>
                     <a onclick="create_group()" class="utility_nav"><span class="glyphicon glyphicon-th-large small"></span>&emsp14;Create Group</a>
                     <div class="panel panel-default" id="create_group" style="display:none;">
-                        <div class="panel-heading">Create Group</div>
+                        <div class="panel-heading" style="font-family:Comfortaa">Create Group</div>
                         <div class="panel-body" id="create_group_body">
                         </div>
                     </div>
@@ -614,7 +614,7 @@
                 <li><a onclick="view_group_details()" class="utility_nav"><span class="glyphicon glyphicon-user small"></span>&emsp14;View/Edit Groups</a></li>
             </ul>
             <h6>Use <b>View/Edit Groups</b> to edit users.</h6>
-            <h5><b style="color:#00BFA5">PERSONAL</b></h5>
+            <h5><b style="color:#00BFA5;font-family:Comfortaa;">PERSONAL</b></h5>
             <ul class="list-unstyled" style="line-height:2;margin-left:20px;">
                 <li><a onclick="get_change_password()" class="utility_nav"><span class="glyphicon glyphicon-lock small"></span>&emsp14;Change Password</a></li>
                 <li><a onclick="get_edit_profile()" class="utility_nav"><span class="glyphicon glyphicon-user small"></span>&emsp14;Edit Profile</a></li>

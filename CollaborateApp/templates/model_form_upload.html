@@ -1,5 +1,5 @@
-<h5><b>Uploading file to "{{ name }}"</b></h5>
-<form method="post" enctype="multipart/form-data" action="{% url 'collaborate:file_form' groupid=id%}">
+<h5><b style="font-family:Comfortaa">Uploading file to "{{ name }}"</b></h5>
+<form method="post" enctype="multipart/form-data" action="{% url 'collaborate:file_form' groupid=id%}" style="font-family:Khula">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-success btn-sm">Upload</button>
