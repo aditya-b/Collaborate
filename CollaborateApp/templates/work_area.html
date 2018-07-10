@@ -10,8 +10,8 @@
         var theme_options = ['default', '3024-day', '3024-night', 'abcdef', 'ambiance', 'base16-dark', 'base16-light', 'bespin', 'blackboard', 'cobalt', 'colorforth', 'darcula', 'dracula', 'duotone-dark', 'duotone-light', 'eclipse', 'elegant', 'erlang-dark', 'gruvbox-dark', 'hopscotch', 'icecoder', 'idea', 'isotope', 'lesser-dark', 'liquibyte', 'lucario', 'material', 'mbo', 'mdn-like', 'midnight', 'monokai', 'neat', 'neo', 'night', 'oceanic-next', 'panda-syntax', 'paraiso-dark', 'paraiso-light', 'pastel-on-dark', 'railscasts', 'rubyblue', 'seti', 'shadowfox', 'solarized dark', 'solarized light', 'the-matrix', 'tomorrow-night-bright', 'tomorrow-night-eighties', 'ttcn', 'twilight', 'vibrant-ink', 'xq-dark', 'xq-light', 'yeti', 'zenburn']
         if(port)
             host_url += ':' + window.location.port;
-        var input = document.getElementById("theme_selector");
         function selectTheme() {
+            var input = document.getElementById("theme_selector");
             var theme = input.options[input.selectedIndex].textContent;
             editor.setOption("theme", theme);
         }
@@ -193,7 +193,7 @@
                         theme_changer.setAttribute('class','form-control');
                         theme_changer.setAttribute('id','theme_selector');
                         theme_changer.setAttribute('onchange','selectTheme()');
-                        theme_changer.setAttribute('style','float:right;margin-right:10px;width:50px;');
+                        theme_changer.setAttribute('style','float:right;margin-right:10px;width:250px;');
                         for(option in theme_options)
                         {
                             var option_div = document.createElement("option");
