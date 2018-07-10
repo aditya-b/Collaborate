@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,23 +17,23 @@
         <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+              <caret line="195" column="101" selection-start-line="195" selection-start-column="101" selection-end-line="195" selection-end-column="101" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#27588#27594#0" expanded="true" />
-                <element signature="e#27594#27600#0" expanded="true" />
+                <element signature="e#29381#29387#0" expanded="true" />
+                <element signature="e#29387#29393#0" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#30196#30204#0" expanded="true" />
+                <element signature="e#31989#31997#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#30693#30701#0" expanded="true" />
+                <element signature="e#32486#32494#0" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#h5#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#31097#31105#0" expanded="true" />
-                <element signature="e#31254#31262#0" expanded="true" />
+                <element signature="e#32890#32898#0" expanded="true" />
+                <element signature="e#33047#33055#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -239,6 +238,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49456522" visible="true" weight="0.14806548" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
@@ -624,23 +624,23 @@
     <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+          <caret line="195" column="101" selection-start-line="195" selection-start-column="101" selection-end-line="195" selection-end-column="101" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#27588#27594#0" expanded="true" />
-            <element signature="e#27594#27600#0" expanded="true" />
+            <element signature="e#29381#29387#0" expanded="true" />
+            <element signature="e#29387#29393#0" expanded="true" />
             <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#30196#30204#0" expanded="true" />
+            <element signature="e#31989#31997#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#30693#30701#0" expanded="true" />
+            <element signature="e#32486#32494#0" expanded="true" />
             <element signature="n#style#0;n#b#0;n#h5#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#31097#31105#0" expanded="true" />
-            <element signature="e#31254#31262#0" expanded="true" />
+            <element signature="e#32890#32898#0" expanded="true" />
+            <element signature="e#33047#33055#0" expanded="true" />
           </folding>
         </state>
       </provider>

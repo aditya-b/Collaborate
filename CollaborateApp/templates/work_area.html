@@ -193,12 +193,12 @@
                         theme_changer.setAttribute('class','form-control');
                         theme_changer.setAttribute('id','theme_selector');
                         theme_changer.setAttribute('onchange','selectTheme()');
-                        theme_changer.setAttribute('style','float:right;margin-right:10px;');
+                        theme_changer.setAttribute('style','float:right;margin-right:10px;width:50px;');
                         for(option in theme_options)
                         {
                             var option_div = document.createElement("option");
-                            option_div.value = option;
-                            option_div.text = option;
+                            option_div.value = options[option];
+                            option_div.text = options[option];
                             theme_changer.appendChild(option_div);
                         }
                         save_button.setAttribute('class','btn btn-success');
