@@ -7,8 +7,14 @@
         var file_list = ['py','pdf','java','js','css','html','r','c','json'];
         var host_url = window.location.protocol + '//' + window.location.hostname;
         var port = window.location.port;
+        var theme_options = ['default', '3024-day', '3024-night', 'abcdef', 'ambiance', 'base16-dark', 'base16-light', 'bespin', 'blackboard', 'cobalt', 'colorforth', 'darcula', 'dracula', 'duotone-dark', 'duotone-light', 'eclipse', 'elegant', 'erlang-dark', 'gruvbox-dark', 'hopscotch', 'icecoder', 'idea', 'isotope', 'lesser-dark', 'liquibyte', 'lucario', 'material', 'mbo', 'mdn-like', 'midnight', 'monokai', 'neat', 'neo', 'night', 'oceanic-next', 'panda-syntax', 'paraiso-dark', 'paraiso-light', 'pastel-on-dark', 'railscasts', 'rubyblue', 'seti', 'shadowfox', 'solarized dark', 'solarized light', 'the-matrix', 'tomorrow-night-bright', 'tomorrow-night-eighties', 'ttcn', 'twilight', 'vibrant-ink', 'xq-dark', 'xq-light', 'yeti', 'zenburn']
         if(port)
             host_url += ':' + window.location.port;
+        var input = document.getElementById("theme_selector");
+        function selectTheme() {
+            var theme = input.options[input.selectedIndex].textContent;
+            editor.setOption("theme", theme);
+        }
         function load_home()
         {
             var xhttp = new XMLHttpRequest();
@@ -183,6 +189,18 @@
                         var header = document.createElement("h4");
                         var save_button = document.createElement("button");
                         var delete_button = document.createElement("button");
+                        var theme_changer = document.createElement("select");
+                        theme_changer.setAttribute('class','form-control');
+                        theme_changer.setAttribute('id','theme_selector');
+                        theme_changer.setAttribute('onchange','selectTheme()');
+                        theme_changer.setAttribute('style','float:right;margin-right:10px;');
+                        for(option in theme_options)
+                        {
+                            var option_div = document.createElement("option");
+                            option_div.value = option;
+                            option_div.text = option;
+                            theme_changer.appendChild(option_div);
+                        }
                         save_button.setAttribute('class','btn btn-success');
                         delete_button.setAttribute('class','btn btn-danger');
                         save_button.setAttribute('style','float:right;margin-right:10px;');
@@ -196,6 +214,7 @@
                         textarea.setAttribute('style','margin:20px;');
                         content.appendChild(delete_button);
                         content.appendChild(save_button);
+                        content.appendChild(theme_changer);
                         content.appendChild(header);
                         content.appendChild(textarea);
                         var myTextarea=document.getElementById('codearea')

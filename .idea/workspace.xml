@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/userhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/userhome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/view_groups.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/view_groups.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,57 +13,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="signup_form.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/forms/signup_form.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="17" column="125" selection-start-line="17" selection-start-column="125" selection-end-line="17" selection-end-column="125" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_profile.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
-              <folding>
-                <element signature="n#style#0;n#h3#0;n#center#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#center#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="work_area.html" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="work_area.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="616" column="62" selection-start-line="616" selection-start-column="62" selection-end-line="616" selection-end-column="62" />
+            <state relative-caret-position="204">
+              <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#27588#27594#0" expanded="true" />
+                <element signature="e#27594#27600#0" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#30196#30204#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#30693#30701#0" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#h5#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_groups.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/view_groups.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="40" selection-start-column="40" selection-end-column="40" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#31097#31105#0" expanded="true" />
+                <element signature="e#31254#31262#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,9 +102,9 @@
         <option value="$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/userhome.html" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/view_groups.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/edit_profile.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" />
       </list>
     </option>
   </component>
@@ -158,7 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,6 +153,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,14 +239,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49456522" visible="true" weight="0.14806548" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49456522" visible="true" weight="0.14806548" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32843137" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32843137" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32843137" />
       <window_info id="Structure" order="1" sideWeight="0.5054348" side_tool="true" weight="0.14806548" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32843137" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -301,21 +261,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49635038" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" sideWeight="0.50364965" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32843137" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32843137" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32843137" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
@@ -574,9 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="105" column="77" lean-forward="true" selection-start-line="105" selection-start-column="77" selection-end-line="105" selection-end-column="77" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,22 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
           <caret line="82" column="106" selection-start-line="82" selection-start-column="106" selection-end-line="82" selection-end-column="106" />
-          <folding>
-            <element signature="n#style#0;n#b#0;n#center#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#center#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h3#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h3#0;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h3#0;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h3#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h3#0;n#div#7;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#7;n#div#2;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,10 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="51" column="68" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -632,12 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="126" column="75" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="75" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,10 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="81" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#center#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,11 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="127" selection-start-line="1" selection-start-column="127" selection-end-line="1" selection-end-column="127" />
-          <folding>
-            <element signature="n#style#0;n#b#0;n#h5#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#1;n#h6#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,9 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -678,13 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h5#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,32 +607,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="616" column="62" selection-start-line="616" selection-start-column="62" selection-end-line="616" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h5#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/view_groups.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="40" selection-start-column="40" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,9 +618,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
           <folding>
-            <element signature="n#style#0;n#h3#0;n#center#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#27588#27594#0" expanded="true" />
+            <element signature="e#27594#27600#0" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#30196#30204#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#30693#30701#0" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#h5#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#31097#31105#0" expanded="true" />
+            <element signature="e#31254#31262#0" expanded="true" />
           </folding>
         </state>
       </provider>
