@@ -193,13 +193,13 @@
                         theme_changer.setAttribute('class','form-control');
                         theme_changer.setAttribute('id','theme_selector');
                         theme_changer.setAttribute('onchange','selectTheme()');
-                        theme_changer.setAttribute('style','float:right;margin-right:10px;');
+                        theme_changer.setAttribute('style','float:right;margin-right:10px;max-width:250px;z-index:1000;');
                         for(option in theme_options)
                         {
                             var option_div = document.createElement("option");
                             option_div.value = theme_options[option];
                             option_div.text = theme_options[option];
-                            theme_changer.appendChild(option_div);
+                            theme_changer.add(option_div);
                         }
                         save_button.setAttribute('class','btn btn-success');
                         delete_button.setAttribute('class','btn btn-danger');
