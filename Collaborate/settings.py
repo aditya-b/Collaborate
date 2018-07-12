@@ -135,8 +135,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
-AWS_ACCESS_KEY_ID = 'AKIAI2A73JA6522CWECQ'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIAIXWOIFOKG744Q2SA '
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'elasticbeanstalk-us-east-2-761812765230'
 AWS_DOMAIN = 's3.amazonaws.com'
 AWS_S3_CUSTOM_DOMAIN = '{0}.{1}'.format(AWS_STORAGE_BUCKET_NAME,AWS_DOMAIN)

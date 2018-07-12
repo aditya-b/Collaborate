@@ -291,7 +291,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/code_editor.html" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/dec.py" />
     <entry file="file://$USER_HOME$/Downloads/dec.py" />
     <entry file="file://$PROJECT_DIR$/CollaborateApp/cors.py">
@@ -582,6 +581,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.ebextensions/django.config">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_app-2eb8-180712_185731.zip/Collaborate/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="137" column="41" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="41" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Collaborate/settings.py">
       <provider selected="true" editor-type-id="text-editor">
