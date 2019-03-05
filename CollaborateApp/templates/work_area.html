@@ -90,7 +90,7 @@
                             delete_element.setAttribute("style","float:right;margin-right:10px;");
                             delete_element.setAttribute("onclick","delete_file("+response[i].id+")");
                             list_text.setAttribute("id","file_"+response[i].id);
-                            list_text.setAttribute("onclick","load_file("+response[i].id + "," + btoa(response[i].url)+ ")");
+                            list_text.setAttribute("onclick","load_file("+response[i].id + ",'" + btoa(response[i].url)+ "')");
                             list_element.appendChild(img_element);
                             list_element.appendChild(download_element);
                             list_element.appendChild(delete_element);
