@@ -8,11 +8,11 @@ from CollaborateApp.forms.signup_form import SignupForm
 
 
 class LoginView(View):
-    def get(self,request,*args,**kwargs):
+    def get(self, request, *args, **kwargs):
         form = LoginForm()
         return render(request,'login.html',{'form':form,'message':None})
 
-    def post(self,request,*args,**kwargs):
+    def post(self, request, *args, **kwargs):
         form = LoginForm(request.POST)
         if form.is_valid():
             values = list(form.cleaned_data.values())
