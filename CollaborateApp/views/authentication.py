@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
 
@@ -15,12 +16,22 @@ class LoginView(View):
         form = LoginForm(request.POST)
         if form.is_valid():
             values = list(form.cleaned_data.values())
-            user=authenticate(request,username=values[0],password=values[1])
+            user = authenticate(request, username=values[0], password=values[1])
             if user is not None:
-                login(request,user)
+                login(request, user)
                 return redirect('collaborate:ui_workspace_groups', username=request.user.username)
             else:
-                return render(request, 'login.html', {'form': form,'message': 'Invalid credentials!'})
+                try:
+                    user = User.objects.get(email=values[0])
+                    user_auth = authenticate(request, username=user.username, password=values[1])
+                    if user_auth is None:
+                        return render(request, 'login.html', {'form': form, 'message': 'Invalid credentials !' + values[
+                            0] + ' ' + user.username})
+                    else:
+                        login(request, user_auth)
+                        return redirect('collaborate:ui_workspace_groups', username=request.user.username)
+                except Exception:
+                    return render(request, 'login.html', {'form': form, 'message': 'Invalid credentials!'})
 
 
 class SignupView(View):
