@@ -106,7 +106,10 @@ class GetFileData(APIView):
                         data['data'] = get_data_from_s3(files.url.name)
                         return JsonResponse(data, status=200)
                     except Exception as e:
-                        return JsonResponse({'message': 'Error: ' + e.__str__() + '\n Try downloading the file instead.'}, status=404)
+                        return JsonResponse({
+                            'message': 'Error: ' + e.__str__() + '\n Try downloading the file instead.',
+                            'url': files.url},
+                        status=404)
             return JsonResponse({'message': 'Restricted Access'}, status=403)
         except ObjectDoesNotExist:
             return JsonResponse({'message': 'File data not found!'}, status=404)
