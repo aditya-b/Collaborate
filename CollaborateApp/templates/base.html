@@ -71,9 +71,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="{% static 'lib/jquery_transport.js' %}"></script>
     <link href='https://fonts.googleapis.com/css?family=Khula' rel='stylesheet'>
-    <script src="{% static 'collaborate/login.js' %}"></script>
-    <script src="{% static 'collaborate/signup.js' %}"></script>
-    <script src="{% static 'collaborate/workarea.js' %}"></script>
     <style>
         a.menu_nav, a.menu_nav:visited, a.menu_nav:link
         {
@@ -143,8 +140,9 @@
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
-
     </style>
+    {% block javascript %}
+    {% endblock %}
 </head>
 <body onloadeddata="close_loader()">
     <div class="navbar navbar-inverse navbar-fixed-top navbar-responsive" style="border-radius:0px;min-width:100%;max-height:55px; font-family:Comfortaa;">
