@@ -135,3 +135,25 @@ class DownloadFile(APIView):
             return JsonResponse({'message': 'Restricted Access'}, status=403)
         except ObjectDoesNotExist:
             return JsonResponse({'message': 'File not found!'}, status=404)
+
+
+class FileUrl(APIView):
+    def get(self, request, *args, **kwargs):
+        if type(request.user) == AnonymousUser:
+            return JsonResponse({'message': 'Restricted Access'}, status=403)
+        try:
+            file = Files.objects.get(id=kwargs['fileid'])
+            group = file.group
+            users = group.user_set.values('username')
+            for user in users:
+                if user['username'] == request.user.username:
+                    try:
+                        return JsonResponse({
+                            'message': 'File found',
+                            'url': file.url
+                        }, status= 200)
+                    except FileNotFoundError:
+                        return JsonResponse({'message': 'File not found!'}, status=404)
+            return JsonResponse({'message': 'Restricted Access'}, status=403)
+        except ObjectDoesNotExist:
+            return JsonResponse({'message': 'File not found!'}, status=404)

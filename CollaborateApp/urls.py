@@ -22,6 +22,7 @@ urlpatterns = [
     path('api/file/edit/<int:fileid>/', csrf_exempt(EditFile.as_view()), name='edit_file'),
     path('api/file/delete/<int:fileid>/', DeleteFile.as_view(), name='delete_file'),
     path('api/file/download/<int:fileid>/', DownloadFile.as_view(), name='download_file'),
+    path('api/file/url/<int:fileid>/', FileUrl.as_view(), name='get_file_url'),
     path('api/<int:group>/add_user/', AddToGroup.as_view(), name='add_to_group'),
     path('api/<int:group>/remove_user/<str:user>', DeleteFromGroup.as_view(), name='delete_from_group'),
     path('<str:username>/workspace/', DisplayGroups.as_view(), name='ui_workspace_groups'),

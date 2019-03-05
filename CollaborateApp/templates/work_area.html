@@ -165,7 +165,6 @@
                  dataType:'binary',
                  processData:false,
                  success: function (data) {
-                    console.log(data);
                      var a = document.createElement('a');
                      var url = window.URL.createObjectURL(data);
                      a.href = url;
@@ -233,15 +232,23 @@
                     error:function(error)
                     {
                         alert(error.responseJSON['message']);
-                        console.log(error.responseJSON)
-                        var content = document.getElementById("content");
-                        content.innerHTML = "";
+                        console.log(error.responseJSON);
                     }
                     })
             }
             else
             {
-                download_file(file_id);
+                $.ajax({
+                    url: host_url + "{% url 'collaborate:get_file_url' fileid=1 %}".replace(/1/,file_id),
+                    type:'GET',
+                    dataType: 'json',
+                    success:function(response){
+                        console.log(response);
+                    },
+                    error:function(error) {
+                        console.log(error);
+                    }
+                 });
             }
         }
 
