@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="Bug Fixes">
+    <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="Separate JS from templates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,20 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="166" column="60" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/signup.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+            <state relative-caret-position="425">
+              <caret line="163" column="71" selection-start-line="163" selection-start-column="71" selection-end-line="163" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -105,8 +93,8 @@
         <option value="$PROJECT_DIR$/CollaborateApp/templates/login.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/signup.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/static/collaborate/login.js" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/base.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/static/collaborate/signup.js" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/base.html" />
       </list>
     </option>
   </component>
@@ -280,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551786555734</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Separate JS from templates">
+      <created>1551870034217</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551870034217</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -357,7 +352,8 @@
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Open files in viewer" />
     <MESSAGE value="Bug Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes" />
+    <MESSAGE value="Separate JS from templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separate JS from templates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -711,17 +707,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="166" column="60" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/signup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="163" column="71" selection-start-line="163" selection-start-column="71" selection-end-line="163" selection-end-column="71" />
         </state>
       </provider>
     </entry>

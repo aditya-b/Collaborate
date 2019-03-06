@@ -161,11 +161,14 @@
         var collaborate_home_url = "{% url 'collaborate:home' %}";
         var edit_profile_url = "{% url 'collaborate:edit_profile' %}";
         var get_users_by_keyword_url = "{% url 'collaborate:get_users_by_keyword' %}";
-        var send_email_url = "{% url 'collaborate:send_reset_code' %}"'
+        var send_email_url = "{% url 'collaborate:send_reset_code' %}";
         var reset_password_url = "{% url 'collaborate:reset_password' %}";
         var signup_url = "{% url 'collaborate:add_user' %}";
     </script>
     {% endblock %}
+    <script src="{% static 'collaborate/workarea.js' %}"></script>
+    <script src="{% static 'collaborate/login.js' %}"></script>
+    <script src="{% static 'collaborate/signup.js' %}"></script>
 </head>
 <body onloadeddata="close_loader()">
     <div class="navbar navbar-inverse navbar-fixed-top navbar-responsive" style="border-radius:0px;min-width:100%;max-height:55px; font-family:Comfortaa;">
