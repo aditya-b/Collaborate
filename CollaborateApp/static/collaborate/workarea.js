@@ -93,9 +93,9 @@ function load_files(group_id,flag)
                     var file_name = response[i].url.split('/').pop();
                     var file_ext = file_name.split('.').pop();
                     if( file_list.includes(file_ext))
-                        img_element.setAttribute("src","{% static 'exts/9.png' %}".replace(9,file_ext));
+                        img_element.setAttribute("src", file_icon_url.replace(9,file_ext));
                     else
-                        img_element.setAttribute("src","{% static 'exts/file.png' %}");
+                        img_element.setAttribute("src",file_icon_url.replace(9,'file'));
                     list_text.innerHTML = file_name;
                     list_element.appendChild(list_text);
                     list.children.length += 1;
