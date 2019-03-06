@@ -60,7 +60,7 @@ function load_files(group_id,flag)
             var loader = document.getElementById('group_loader_'+group_id);
             loader.className.replace('loads','load');
             $.ajax({
-            url: host_url + load_files.replace(1,group_id),
+            url: host_url + load_files_url.replace(1,group_id),
             type:'GET',
             dataType: 'json',
             success:function(response){
