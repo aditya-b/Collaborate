@@ -102,6 +102,16 @@ function load_files(group_id,flag)
                     list.appendChild(list_element);
                     nav.className = nav.className.replace("close","open");
                 }
+                if(no_of_files == 0) {
+                    var list_element = document.createElement("li");
+                    var list_text = document.createElement("span");
+                    list_text.innerHTML = "No files added yet."
+                    list_text.setAttribute("style", "color:grey");
+                    list_element.appendChild(list_text);
+                    list.children.length += 1;
+                    list.appendChild(list_element);
+                    nav.className = nav.className.replace("close","open");
+                }
                 loader.className.replace('load','loads');
             },
             error:function(error){
