@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -142,6 +141,30 @@
         }
     </style>
     {% block javascript %}
+    <script>
+        var load_home_url = "{% url 'collaborate:user_home' %}";
+        var load_upload_url = "{% url 'collaborate:file_form' groupid=1%}";
+        var load_files_url = "{% url 'collaborate:group_files' group=1 %}";
+        var save_file_url = "{% url 'collaborate:edit_file' fileid=1 %}";
+        var delete_file_url = "{% url 'collaborate:delete_file' fileid=1 %}";
+        var download_file_url = "{% url 'collaborate:download_file' fileid=1 %}";
+        var load_file_url = "{% url 'collaborate:get_file_data' fileid=1 %}";
+        var create_group_url = "{% url 'collaborate:add_group' %}";
+        var load_group_url = "{% url 'collaborate:group_details' group=1 %}";
+        var view_group_details_url = "{% url 'collaborate:load_user_details' %}";
+        var delete_group_url = "{% url 'collaborate:delete_group' group=1 %}";
+        var add_user_to_group_url = "{% url 'collaborate:add_to_group' group=1 %}";
+        var delete_from_group_url = "{% url 'collaborate:delete_from_group' group=1 user='h' %}";
+        var get_change_password_url = "{% url 'collaborate:fetch_change_password_page' %}";
+        var get_edit_profile_url = "{% url 'collaborate:fetch_edit_profile_page' %}";
+        var change_password_url = "{% url 'collaborate:change_password' %}";
+        var collaborate_home_url = "{% url 'collaborate:home' %}";
+        var edit_profile_url = "{% url 'collaborate:edit_profile' %}";
+        var get_users_by_keyword_url = "{% url 'collaborate:get_users_by_keyword' %}";
+        var send_email_url = "{% url 'collaborate:send_reset_code' %}"'
+        var reset_password_url = "{% url 'collaborate:reset_password' %}";
+        var signup_url = "{% url 'collaborate:add_user' %}";
+    </script>
     {% endblock %}
 </head>
 <body onloadeddata="close_loader()">
