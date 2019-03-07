@@ -1,8 +1,15 @@
 var editor = null;
-var file_list = ['py','java','js','css','html','r','c','json'];
+var file_list = ['py','java','js','css','html','r','c','json', 'xml', 'rtf', 'txt'];
+var img_list = ['jpg', 'jpeg', 'gif'];
+var music_list = ['mp3', 'ogg', 'wav'];
+var video_list = ['mp4', 'avi'];
+var gdocs_list = ['pdf', 'docx', 'doc', 'ppt', 'pptx', 'xls', 'xlsx']
+var others_list = ['zip', 'exe', 'iso']
+var icon_list = file_list + gdocs_list + img_list + others_list + video_list + music_list;
+var exec_api_list = ['py', 'java', 'c', 'cpp', 'r', 'js'];
 var host_url = window.location.protocol + '//' + window.location.hostname;
 var port = window.location.port;
-var theme_options = ['default', '3024-day', '3024-night', 'abcdef', 'ambiance', 'base16-dark', 'base16-light', 'bespin', 'blackboard', 'cobalt', 'colorforth', 'darcula', 'dracula', 'duotone-dark', 'duotone-light', 'eclipse', 'elegant', 'erlang-dark', 'gruvbox-dark', 'hopscotch', 'icecoder', 'idea', 'isotope', 'lesser-dark', 'liquibyte', 'lucario', 'material', 'mbo', 'mdn-like', 'midnight', 'monokai', 'neat', 'neo', 'night', 'oceanic-next', 'panda-syntax', 'paraiso-dark', 'paraiso-light', 'pastel-on-dark', 'railscasts', 'rubyblue', 'seti', 'shadowfox', 'solarized dark', 'solarized light', 'the-matrix', 'tomorrow-night-bright', 'tomorrow-night-eighties', 'ttcn', 'twilight', 'vibrant-ink', 'xq-dark', 'xq-light', 'yeti', 'zenburn']
+var theme_options = ['default', '3024-day', '3024-night', 'abcdef', 'ambiance', 'base16-dark', 'base16-light', 'bespin', 'blackboard', 'cobalt', 'colorforth', 'darcula', 'dracula', 'duotone-dark', 'duotone-light', 'eclipse', 'elegant', 'erlang-dark', 'gruvbox-dark', 'hopscotch', 'icecoder', 'idea', 'isotope', 'lesser-dark', 'liquibyte', 'lucario', 'material', 'mbo', 'mdn-like', 'midnight', 'monokai', 'neat', 'neo', 'night', 'oceanic-next', 'panda-syntax', 'paraiso-dark', 'paraiso-light', 'pastel-on-dark', 'railscasts', 'rubyblue', 'seti', 'shadowfox', 'solarized dark', 'solarized light', 'the-matrix', 'tomorrow-night-bright', 'tomorrow-night-eighties', 'ttcn', 'twilight', 'vibrant-ink', 'xq-dark', 'xq-light', 'yeti', 'zenburn'];
 if(port)
     host_url += ':' + window.location.port;
 
@@ -73,6 +80,9 @@ function load_files(group_id,flag)
                     var img_element = document.createElement("img");
                     var download_element = document.createElement("span");
                     var delete_element = document.createElement("span");
+                    var load_element = document.createElement("span");
+                    var file_name = response[i].url.split('/').pop();
+                    var file_ext = file_name.split('.').pop();
                     img_element.setAttribute("height","15px");
                     img_element.setAttribute("width","15px");
                     img_element.setAttribute("style","margin-right:10px;");
@@ -81,21 +91,32 @@ function load_files(group_id,flag)
                     download_element.setAttribute("style","float:right;margin-right:10px;");
                     download_element.setAttribute("onclick","download_file("+response[i].id+")");
                     download_element.setAttribute("id","download_"+response[i].id);
+                    load_element.setAttribute("class","glyphicon glyphicon-refresh load small");
+                    load_element.setAttribute("style","float:right;margin-right:10px;display:none;");
+                    load_element.setAttribute("id","load_"+response[i].id);
                     delete_element.setAttribute("id","deletefile_"+response[i].id);
                     delete_element.setAttribute("class","glyphicon glyphicon-trash");
                     delete_element.setAttribute("style","float:right;margin-right:10px;");
-                    delete_element.setAttribute("onclick","delete_file("+response[i].id+")");
+                    delete_element.setAttribute("onclick","delete_file("+response[i].id+"," + group_id +")");
                     list_text.setAttribute("id","file_"+response[i].id);
-                    list_text.setAttribute("onclick","load_file("+response[i].id + ",'" + btoa(response[i].url)+ "')");
+                    list_text.setAttribute("name", file_name);
+                    list_text.setAttribute("onclick","load_file("+response[i].id + ",'" + btoa(response[i].url)+ "','" + file_ext +"')");
                     list_element.appendChild(img_element);
                     list_element.appendChild(download_element);
                     list_element.appendChild(delete_element);
-                    var file_name = response[i].url.split('/').pop();
-                    var file_ext = file_name.split('.').pop();
-                    if( file_list.includes(file_ext))
+                    list_element.appendChild(load_element);
+                    file_name = file_name.replace('.' + file_ext, '');
+                    if( icon_list.includes(file_ext))
+                    {
                         img_element.setAttribute("src", file_icon_url.replace(9,file_ext));
+                        file_ext = '..';
+                    }
                     else
                         img_element.setAttribute("src",file_icon_url.replace(9,'file'));
+                    if(file_name.length > 18)
+                        file_name = file_name.slice(0,18) + '.' + file_ext;
+                     if(!icon_list.includes(file_ext) && file_name.indexOf('.' + file_ext) == -1)
+                        file_name = file_name + '.' + file_ext;
                     list_text.innerHTML = file_name;
                     list_element.appendChild(list_text);
                     list.children.length += 1;
@@ -124,6 +145,8 @@ function load_files(group_id,flag)
 function save_file(file_id)
 {
     var myTextarea = document.getElementById('codearea')
+    var display = document.getElementById.("load_"+file_id).style.display;
+    display = "inline-block";
     $.ajax({
             url: host_url + save_file_url.replace(1,file_id),
             type:'GET',
@@ -131,15 +154,19 @@ function save_file(file_id)
             dataType: 'json',
             success:function(response){
                 alert(response.message)
+                display = "none";
             },
             error:function(error){
-                alert(error.responseJSON['message'])
+                alert(error.responseJSON['message']);
+                display = "none";
             }
     })
 }
 
-function delete_file(file_id)
+function delete_file(file_id, group_id)
 {
+    var display = document.getElementById.("load_"+file_id).style.display;
+    display = "inline-block";
     $.ajax({
             url: host_url + delete_file_url.replace(1,file_id),
             type:'GET',
@@ -155,16 +182,21 @@ function delete_file(file_id)
                 img.parentElement.removeChild(img);
                 download.parentElement.removeChild(download);
                 del.parentElement.removeChild(del);
-
+				var list = document.getElementById('files_'+group_id);
+				list.children.length--;
+				display = "none";
             },
             error:function(error){
-                alert(error.responseJSON['message'])
+                alert(error.responseJSON['message']);
+                display = "none";
             }
     })
 }
 
 function download_file(file_id)
 {
+    var display = document.getElementById.("load_"+file_id).style.display;
+    display = "inline-block";
     $.ajax({
          url: host_url + download_file_url.replace(1,file_id),
          type:'GET',
@@ -174,23 +206,26 @@ function download_file(file_id)
              var a = document.createElement('a');
              var url = window.URL.createObjectURL(data);
              a.href = url;
-             a.download = document.getElementById("file_"+file_id).innerHTML;
+             a.download = document.getElementById("file_"+file_id).getAttribute("name");
              document.body.appendChild(a);
              a.click();
              window.URL.revokeObjectURL(url);
+             display = "none";
          },
             error:function(error){
-                alert(error.responseJSON['message'])
+                alert(error.responseJSON['message']);
+                display = "none";
             }
     })
 }
 
-function load_file(file_id, file_url_encoded)
+function load_file(file_id, file_url_encoded, extension)
 {
     var file_field = document.getElementById("file_"+file_id);
-    var extension = file_field.innerHTML.split('.').pop();
     var content = document.getElementById("content");
     content.innerHTML = "";
+    var display = document.getElementById.("load_"+file_id).style.display;
+    display = "inline-block";
     if(file_list.includes(extension)){
     $.ajax({
             url: host_url + load_file_url.replace(/1/,file_id),
@@ -202,6 +237,10 @@ function load_file(file_id, file_url_encoded)
                 var save_button = document.createElement("button");
                 var delete_button = document.createElement("button");
                 var theme_changer = document.createElement("select");
+                var theme_changer_label = document.createElement("label");
+                theme_changer_label.setAttribute('class', 'form-control');
+                theme_changer_label.setAttribute('style','float:right;margin-right:10px;max-width:250px;z-index:1000;, box-shadow:none; -webkit-box-shadow:none; width:fit-content;border:none;');
+                theme_changer_label.innerHTML = "Editor Theme: ";
                 theme_changer.setAttribute('class','form-control');
                 theme_changer.setAttribute('id','theme_selector');
                 theme_changer.setAttribute('onchange','selectTheme()');
@@ -227,6 +266,7 @@ function load_file(file_id, file_url_encoded)
                 content.appendChild(delete_button);
                 content.appendChild(save_button);
                 content.appendChild(theme_changer);
+                content.appendChild(theme_changer_label);
                 content.appendChild(header);
                 content.appendChild(textarea);
                 var myTextarea=document.getElementById('codearea')
@@ -234,17 +274,18 @@ function load_file(file_id, file_url_encoded)
                     lineNumbers: true,
                 });
                 editor.setValue(response['data'].toString());
-                },
+                display = "none";
+            },
             error:function(error)
             {
                 alert(error.responseJSON['message']);
                 console.log(error.responseJSON);
+                display = "none";
             }
             })
     }
-    else
+    else if(gdocs_list.includes(extension))
     {
-        console.log(file_url_encoded);
         var iframe = document.createElement("iframe");
         var url_file = "http://docs.google.com/viewer?url=" + atob(file_url_encoded) + "&embedded=true";
         iframe.setAttribute('src', url_file);
@@ -252,6 +293,56 @@ function load_file(file_id, file_url_encoded)
         iframe.setAttribute('height', '600px');
         iframe.setAttribute('allowfullscreen', 'true');
         content.appendChild(iframe);
+        display = "none";
+    }
+    else if(music_list.includes(extension)) {
+        var audio = document.createElement("audio");
+        var source = document.createElement("source");
+        var center = document.createElement("center");
+        source.setAttribute('src', atob(file_url_encoded));
+        var type = extension === 'mp3'? 'mpeg': 'ogg';
+        source.setAttribute('type', 'audio/' + type);
+        audio.setAttribute('width', '100%');
+        audio.setAttribute('controls', 'true');
+		audio.innerHTML = 'Your browser doesn\'t support this media. Please download the file to view it.';
+		audio.appendChild(source);
+		center.appendChild(audio);
+        content.appendChild(center);
+        display = "none";
+    }
+    else if(video_list.includes(extension)) {
+        var video = document.createElement("video");
+        var source = document.createElement("source");
+        var center = document.createElement("center");
+        source.setAttribute('src', atob(file_url_encoded));
+        var type = extension !== 'ogg' && extension !== 'mp4'? 'webm': extension;
+        source.setAttribute('type', 'video/' + extension);
+        video.setAttribute('style', 'max-width:100%; height:auto');
+        video.setAttribute('controls', 'true');
+		video.innerHTML = 'Your browser doesn\'t support this media. Please download the file to view it.';
+		video.appendChild(source);
+		center.appendChild(video);
+        content.appendChild(center);
+        display = "none";
+    }
+    else if(img_list.includes(extension)) {
+        var img = document.createElement("img");
+        var center = document.createElement("center");
+        img.setAttribute('src', atob(file_url_encoded));
+        img.setAttribute('style', 'max-width:100%; height:auto');
+		center.appendChild(img);
+        content.appendChild(center);
+        display = "none";
+    }
+    else {
+        var iframe = document.createElement("iframe");
+        var url_file = "http://docs.google.com/viewer?url=" + atob(file_url_encoded) + "&embedded=true";
+        iframe.setAttribute('src', url_file);
+        iframe.setAttribute('width', '100%');
+        iframe.setAttribute('height', '600px');
+        iframe.setAttribute('allowfullscreen', 'true');
+        content.appendChild(iframe);
+        display = "none";
     }
 }
 

@@ -37,7 +37,7 @@ class AddUser(APIView):
                 group = Group(name=request.POST['username']+'_Personal')
                 group.save()
                 group.user_set.add(user)
-                return JsonResponse({'message': 'Success'}, status=201)
+                return JsonResponse({'message': 'User successfully added!'}, status=201)
             except IntegrityError:
                 return JsonResponse({'message': 'User exists'}, status=404)
 
@@ -49,7 +49,7 @@ class ChangePassword(APIView):
             user.set_password(request.GET['new_password'])
             user.save()
             log_out(request)
-            return JsonResponse({'message': 'Success'}, status=200)
+            return JsonResponse({'message': 'Password successfully changed!'}, status=200)
         else:
             return JsonResponse({'message': 'Wrong Credentials!'}, status=404)
 

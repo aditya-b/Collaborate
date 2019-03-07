@@ -59,7 +59,7 @@ class EditFile(APIView):
                 if user['username'] == request.user.username:
                     try:
                         set_data_to_s3(files.url.name, request.GET['content'])
-                        return JsonResponse({'message': 'Success'}, status=200)
+                        return JsonResponse({'message': 'File is edited successfully!'}, status=200)
                     except Exception as e:
                         return JsonResponse({'message': 'Error: '+ e.__str__() + '\n Try downloading the file instead.'}, status=404)
             return JsonResponse({'message': 'Restricted Access'}, status=403)
@@ -83,7 +83,7 @@ class DeleteFile(APIView):
                         file.delete()
                         global s3client
                         s3client.delete_object(Bucket=settings.AWS_STORAGE_BUCKET_NAME, Key='documents/' + name)
-                        return JsonResponse({'message': 'Success'}, status=200)
+                        return JsonResponse({'message': 'File successfully deleted!'}, status=200)
                     except ObjectDoesNotExist:
                         return JsonResponse({'message': 'File not found!'}, status=404)
             return JsonResponse({'message': 'Restricted Access'}, status=403)

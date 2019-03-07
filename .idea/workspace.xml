@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="Separate JS from templates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollaborateApp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/templates/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,19 +18,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/work_area.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/execution.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/group_apis.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+            <state relative-caret-position="493">
+              <caret line="344" column="25" selection-start-line="344" selection-start-column="25" selection-end-line="344" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -34,19 +34,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="-85">
+              <caret line="112" column="9" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -70,6 +66,9 @@
       <find>load_file</find>
       <find>\{% url</find>
       <find>\{% ur</find>
+      <find>success</find>
+      <find>upload</find>
+      <find>theme_options</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,8 +101,6 @@
         <option value="$PROJECT_DIR$/Collaborate/storage_backends.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/views/files.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/forms/signup_form.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/templates/home.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/change_password.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/form_add_group.html" />
@@ -113,13 +110,16 @@
         <option value="$PROJECT_DIR$/Collaborate/settings.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/forms/login_form.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/views/authentication.py" />
-        <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/urls.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/work_area.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/login.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/signup.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/static/collaborate/login.js" />
         <option value="$PROJECT_DIR$/CollaborateApp/static/collaborate/signup.js" />
+        <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" />
+        <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py" />
+        <option value="$PROJECT_DIR$/CollaborateApp/templates/home.html" />
+        <option value="$PROJECT_DIR$/CollaborateApp/static/collaborate/execution.js" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/base.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js" />
       </list>
@@ -138,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,12 +160,6 @@
               <item name="Collaborate" type="b2602c69:ProjectViewProjectNode" />
               <item name="Collaborate" type="462c0819:PsiDirectoryNode" />
               <item name="CollaborateApp" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_apis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Collaborate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Collaborate" type="462c0819:PsiDirectoryNode" />
-              <item name="CollaborateApp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -177,7 +172,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551871149203</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Separate JS from templates">
+      <created>1551871835874</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1551871835874</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Separate JS from templates">
+      <created>1551872946784</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1551872946784</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -397,13 +405,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py</url>
-          <line>105</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -428,16 +429,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/auth/mixins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/views/generic/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -518,20 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/views/displayviews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collaborate/storage_backends.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/rest_framework/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -543,13 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/views/files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -574,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_app-2eb8-180712_185731.zip/Collaborate/settings.py" />
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/Collaborate/CollaborateApp/views/authentication.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -598,30 +561,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/views/authentication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/db/models/fields/files.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="222" column="8" selection-start-line="222" selection-start-column="8" selection-end-line="222" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -635,24 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Collaborate/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2346">
-          <caret line="138" column="57" selection-start-line="138" selection-start-column="57" selection-end-line="138" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/serializers/file_serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -677,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="106" selection-start-line="82" selection-start-column="106" selection-end-line="82" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/model_form_upload.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -695,13 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="40" selection-start-column="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/userhome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -719,17 +634,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/group_apis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+        <state relative-caret-position="186">
+          <caret line="61" column="15" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/signup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="375">
           <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <caret line="61" column="85" selection-start-line="61" selection-start-column="85" selection-end-line="61" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/user_apis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="51" column="61" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/views/files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="84" column="98" selection-start-line="84" selection-start-column="98" selection-end-line="84" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/userhome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/views/authentication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/views/displayviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -740,24 +727,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/group_apis.py">
+    <entry file="file://$PROJECT_DIR$/Collaborate/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+        <state relative-caret-position="407">
+          <caret line="150" column="62" lean-forward="true" selection-start-line="150" selection-start-column="62" selection-end-line="150" selection-end-column="62" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Collaborate/storage_backends.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/execution.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="-85">
+          <caret line="112" column="9" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+        <state relative-caret-position="493">
+          <caret line="344" column="25" selection-start-line="344" selection-start-column="25" selection-end-line="344" selection-end-column="25" />
         </state>
       </provider>
     </entry>

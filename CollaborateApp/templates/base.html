@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'imgs/collaborate_logo.png' %}" />
     <title>Collaborate
         {% if request.user.is_authenticated %}
@@ -108,14 +109,7 @@
         }
         .CodeMirror
         {
-            border: 1px solid green;
-            box-shadow:0px 0px 5px green;
-            height:500px;
-        }
-        .CodeMirror-focused
-        {
-            border: 1px solid red;
-            box-shadow:0px 0px 5px red;
+            height: 100%;
         }
         a.utility_nav
         {
