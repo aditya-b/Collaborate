@@ -1,15 +1,15 @@
 var editor = null;
-var file_list = ['py','java','js','css','html','r','c','json', 'xml', 'rtf', 'txt'];
+var file_list = ['py','java','js','css','html','r','c','json', 'xml', 'rtf', 'txt', 'cpp'];
 var img_list = ['jpg', 'jpeg', 'gif'];
 var music_list = ['mp3', 'ogg', 'wav'];
 var video_list = ['mp4', 'avi'];
 var gdocs_list = ['pdf', 'docx', 'doc', 'ppt', 'pptx', 'xls', 'xlsx']
 var others_list = ['zip', 'exe', 'iso']
 var icon_list = file_list + gdocs_list + img_list + others_list + video_list + music_list;
-var exec_api_list = ['py', 'java', 'c', 'cpp', 'r', 'js'];
+var exec_api_list = ['py', 'java', 'c', 'cpp', 'r'];
 var host_url = window.location.protocol + '//' + window.location.hostname;
 var port = window.location.port;
-var theme_options = ['default', '3024-day', '3024-night', 'abcdef', 'ambiance', 'base16-dark', 'base16-light', 'bespin', 'blackboard', 'cobalt', 'colorforth', 'darcula', 'dracula', 'duotone-dark', 'duotone-light', 'eclipse', 'elegant', 'erlang-dark', 'gruvbox-dark', 'hopscotch', 'icecoder', 'idea', 'isotope', 'lesser-dark', 'liquibyte', 'lucario', 'material', 'mbo', 'mdn-like', 'midnight', 'monokai', 'neat', 'neo', 'night', 'oceanic-next', 'panda-syntax', 'paraiso-dark', 'paraiso-light', 'pastel-on-dark', 'railscasts', 'rubyblue', 'seti', 'shadowfox', 'solarized dark', 'solarized light', 'the-matrix', 'tomorrow-night-bright', 'tomorrow-night-eighties', 'ttcn', 'twilight', 'vibrant-ink', 'xq-dark', 'xq-light', 'yeti', 'zenburn'];
+var theme_options = ['abcdef', 'default', '3024-day', '3024-night', 'ambiance', 'base16-dark', 'base16-light', 'bespin', 'blackboard', 'cobalt', 'colorforth', 'darcula', 'dracula', 'duotone-dark', 'duotone-light', 'eclipse', 'elegant', 'erlang-dark', 'gruvbox-dark', 'hopscotch', 'icecoder', 'idea', 'isotope', 'lesser-dark', 'liquibyte', 'lucario', 'material', 'mbo', 'mdn-like', 'midnight', 'monokai', 'neat', 'neo', 'night', 'oceanic-next', 'panda-syntax', 'paraiso-dark', 'paraiso-light', 'pastel-on-dark', 'railscasts', 'rubyblue', 'seti', 'shadowfox', 'solarized dark', 'solarized light', 'the-matrix', 'tomorrow-night-bright', 'tomorrow-night-eighties', 'ttcn', 'twilight', 'vibrant-ink', 'xq-dark', 'xq-light', 'yeti', 'zenburn'];
 if(port)
     host_url += ':' + window.location.port;
 
@@ -65,7 +65,7 @@ function load_files(group_id,flag)
         else
         {
             var loader = document.getElementById('group_loader_'+group_id);
-            loader.className.replace('loads','load');
+            loader.className = loader.className.replace('loads','load');
             $.ajax({
             url: host_url + load_files_url.replace(1,group_id),
             type:'GET',
@@ -106,15 +106,19 @@ function load_files(group_id,flag)
                     list_element.appendChild(delete_element);
                     list_element.appendChild(load_element);
                     file_name = file_name.replace('.' + file_ext, '');
+                    var ext_text = '';
                     if( icon_list.includes(file_ext))
                     {
                         img_element.setAttribute("src", file_icon_url.replace(9,file_ext));
-                        file_ext = '..';
+                        ext_text = '..';
                     }
                     else
+                    {
                         img_element.setAttribute("src",file_icon_url.replace(9,'file'));
+                        ext_text = file_ext;
+                    }
                     if(file_name.length > 18)
-                        file_name = file_name.slice(0,18) + '.' + file_ext;
+                        file_name = file_name.slice(0,18) + '.' + ext_text;
                      if(!icon_list.includes(file_ext) && file_name.indexOf('.' + file_ext) == -1)
                         file_name = file_name + '.' + file_ext;
                     list_text.innerHTML = file_name;
@@ -133,7 +137,7 @@ function load_files(group_id,flag)
                     list.appendChild(list_element);
                     nav.className = nav.className.replace("close","open");
                 }
-                loader.className.replace('load','loads');
+                loader.className = loader.className.replace('load','loads');
             },
             error:function(error){
                 alert(error.responseJSON['message'])
@@ -145,8 +149,7 @@ function load_files(group_id,flag)
 function save_file(file_id)
 {
     var myTextarea = document.getElementById('codearea')
-    var display = document.getElementById.("load_"+file_id).style.display;
-    display = "inline-block";
+    document.getElementById("load_"+file_id).style.display = "inline-block";
     $.ajax({
             url: host_url + save_file_url.replace(1,file_id),
             type:'GET',
@@ -154,19 +157,18 @@ function save_file(file_id)
             dataType: 'json',
             success:function(response){
                 alert(response.message)
-                display = "none";
+                document.getElementById("load_"+file_id).style.display = "none";
             },
             error:function(error){
                 alert(error.responseJSON['message']);
-                display = "none";
+                document.getElementById("load_"+file_id).style.display = "none";
             }
     })
 }
 
 function delete_file(file_id, group_id)
 {
-    var display = document.getElementById.("load_"+file_id).style.display;
-    display = "inline-block";
+    document.getElementById("load_"+file_id).style.display = "inline-block";
     $.ajax({
             url: host_url + delete_file_url.replace(1,file_id),
             type:'GET',
@@ -175,28 +177,30 @@ function delete_file(file_id, group_id)
                 alert(response.message);
                 load_home();
                 var file = document.getElementById("file_"+file_id);
-                var img = document.getElementById("logo_"+file_id);
-                var download = document.getElementById("download_"+file_id);
-                var del = document.getElementById("deletefile_"+file_id);
-                file.parentElement.removeChild(file);
-                img.parentElement.removeChild(img);
-                download.parentElement.removeChild(download);
-                del.parentElement.removeChild(del);
+                file.parentElement.parentElement.removeChild(file.parentElement);
 				var list = document.getElementById('files_'+group_id);
-				list.children.length--;
-				display = "none";
+				if(list.children.length <= 0) {
+                    var nav = document.getElementById('nav_'+group_id);
+					var list_element = document.createElement("li");
+                    var list_text = document.createElement("span");
+                    list_text.innerHTML = "No files added yet."
+                    list_text.setAttribute("style", "color:grey");
+                    list_element.appendChild(list_text);
+                    list.children.length += 1;
+                    list.appendChild(list_element);
+                    nav.className = nav.className.replace("close","open");
+				}
             },
             error:function(error){
                 alert(error.responseJSON['message']);
-                display = "none";
+                document.getElementById("load_"+file_id).style.display = "none";
             }
     })
 }
 
 function download_file(file_id)
 {
-    var display = document.getElementById.("load_"+file_id).style.display;
-    display = "inline-block";
+    document.getElementById("load_"+file_id).style.display = "inline-block";
     $.ajax({
          url: host_url + download_file_url.replace(1,file_id),
          type:'GET',
@@ -210,13 +214,188 @@ function download_file(file_id)
              document.body.appendChild(a);
              a.click();
              window.URL.revokeObjectURL(url);
-             display = "none";
+             document.getElementById("load_"+file_id).style.display = "none";
          },
             error:function(error){
                 alert(error.responseJSON['message']);
-                display = "none";
+                document.getElementById("load_"+file_id).style.display = "none";
             }
     })
+}
+
+function addEditor(file_id){
+	var textarea = document.createElement("textarea");
+    var header = document.createElement("h4");
+    var save_button = document.createElement("button");
+    var delete_button = document.createElement("button");
+    var theme_changer = document.createElement("select");
+    var theme_changer_label = document.createElement("label");
+    theme_changer_label.setAttribute('class', 'form-control');
+    theme_changer_label.setAttribute('style','float:right;margin-right:10px;max-width:250px;z-index:1000;, box-shadow:none; -webkit-box-shadow:none; width:fit-content;border:none;');
+    theme_changer_label.innerHTML = "Editor Theme: ";
+    theme_changer.setAttribute('class','form-control');
+    theme_changer.setAttribute('id','theme_selector');
+    theme_changer.setAttribute('onchange','selectTheme()');
+    theme_changer.setAttribute('style','float:right;margin-right:10px;max-width:250px;z-index:1000;');
+    for(option in theme_options)
+    {
+        var option_div = document.createElement("option");
+        option_div.value = theme_options[option];
+        option_div.text = theme_options[option];
+        theme_changer.add(option_div);
+    }
+    save_button.setAttribute('class','btn btn-success');
+    delete_button.setAttribute('class','btn btn-danger');
+    save_button.setAttribute('style','float:right;margin-right:10px;');
+    delete_button.setAttribute('style','float:right;margin-right:10px;');
+    save_button.setAttribute('onclick','save_file(id)'.replace('id',file_id));
+    delete_button.setAttribute('onclick','delete_file(id)'.replace('id',file_id));
+    save_button.innerHTML = 'SAVE';
+    delete_button.innerHTML = 'DELETE';
+    header.innerHTML = "Code Editor:";
+    textarea.setAttribute('id','codearea');
+    textarea.setAttribute('style','margin:20px;');
+    content.appendChild(delete_button);
+    content.appendChild(save_button);
+    content.appendChild(theme_changer);
+    content.appendChild(theme_changer_label);
+    content.appendChild(header);
+    content.appendChild(textarea);
+}
+
+function addHtmlControls(file_url_encoded) {
+
+}
+
+function changeVersion() {
+	var lang_version_map = {
+		'java': ['JDK 1.8.0_66', 'JDK 9.0.1', 'JDK 10.0.1'],
+		'python2': [ '2.7.11', '2.7.15'],
+		'python3': [ '3.5.1', '3.6.3', '3.6.5'],
+		'c': ['GCC 5.3.0', 'Zapcc 5.0.0', 'GCC 7.2.0', 'GCC 8.1.0'],
+		'cpp': ['GCC 5.3.0', 'Zapcc 5.0.0', 'GCC 7.2.0', 'GCC 8.1.0'],
+		'r': ['3.3.1', '3.4.2', '3.5.0']
+	};
+	var language = document.getElementById('language');
+	var lang = language.options[language.selectedIndex].textContent;
+	var versions = document.getElementById('versions');
+	$('#versions').empty();
+	var versions_options = lang_version_map[lang];
+	for(option in versions_options)
+    {
+        var option_div = document.createElement("option");
+        option_div.value = theme_options[option];
+        option_div.text = theme_options[option];
+        versions.add(option_div);
+    }
+}
+
+function addControls(extension) {
+	var lang_version_map = {
+		'java': ['JDK 1.8.0_66', 'JDK 9.0.1', 'JDK 10.0.1'],
+		'python2': [ '2.7.11', '2.7.15'],
+		'python3': [ '3.5.1', '3.6.3', '3.6.5'],
+		'c': ['GCC 5.3.0', 'Zapcc 5.0.0', 'GCC 7.2.0', 'GCC 8.1.0'],
+		'cpp': ['GCC 5.3.0', 'Zapcc 5.0.0', 'GCC 7.2.0', 'GCC 8.1.0'],
+		'r': ['3.3.1', '3.4.2', '3.5.0']
+	};
+	var ext_lang_map = {
+		'java': 'java',
+		'c': 'c',
+		'py': 'python3',
+		'cpp': 'cpp',
+		'r': 'r'
+	};
+	var language = ext_lang_map[extension];
+	var language_options = Object.keys(lang_version_map);
+	var swap = '';
+	var index = language_options.indexOf(language);
+	swap = language_options[0];
+	language_options[0] = language;
+	language_options[index] = swap;
+	var version_options = lang_version_map[language];
+	var textarea = document.createElement("textarea");
+	var textarea2 = document.createElement("textarea");
+    var header = document.createElement("h4");
+    var run_button = document.createElement("button");
+    var language_changer = document.createElement("select");
+    var language_changer_label = document.createElement("label");
+    language_changer_label.setAttribute('class', 'form-control');
+    language_changer_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none; display:table-cell; vertical-align:middle;');
+    language_changer_label.innerHTML = "Language: ";
+    language_changer.setAttribute('class','form-control');
+    language_changer.setAttribute('id','language');
+    language_changer.setAttribute('onchange','changeVersion()');
+    var version_changer = document.createElement("select");
+    var version_changer_label = document.createElement("label");
+    version_changer_label.setAttribute('class', 'form-control');
+    version_changer_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none; display:table-cell; vertical-align:middle;');
+    version_changer_label.innerHTML = "Version: ";
+    version_changer.setAttribute('class','form-control');
+    version_changer.setAttribute('id','versions');
+    for(option in version_options)
+    {
+        var option_div = document.createElement("option");
+        option_div.value = version_options[option];
+        option_div.text = version_options[option];
+        version_changer.add(option_div);
+    }
+    for(option in language_options)
+    {
+        var option_div = document.createElement("option");
+        option_div.value = language_options[option];
+        option_div.text = language_options[option];
+        language_changer.add(option_div);
+    }
+    run_button.setAttribute('class','btn btn-success');
+    run_button.setAttribute('onclick','executeCode()');
+    run_button.setAttribute('style','margin:10px;');
+    run_button.innerHTML = 'Run';
+    header.innerHTML = "Execution options:";
+    header.setAttribute('style', 'margin-top:25px;')
+    textarea.setAttribute('id','inputarea');
+    textarea.setAttribute('style','margin:20px;width:50%;float:left;resize:none;');
+    textarea.setAttribute('class','form-control');
+    textarea.setAttribute('rows','8');
+    textarea.setAttribute('placeholder','Code input here...');
+    textarea2.setAttribute('id','outputarea');
+    textarea2.setAttribute('style','margin:20px; width:80%; resize-none;');
+    textarea2.setAttribute('class','form-control');
+    textarea2.setAttribute('placeholder','Code output here...');
+    var table = document.createElement('table');
+    table.setAttribute('style', 'float:right;margin-right:50px; margin-bottom:20px;');
+    var row1 = document.createElement('tr');
+    var cell1 = document.createElement('td');
+    cell1.appendChild(language_changer_label);
+    cell1.setAttribute('style', 'padding:5px');
+    var cell2 = document.createElement('td');
+    cell2.appendChild(language_changer);
+    cell2.setAttribute('style', 'padding:5px');
+    row1.appendChild(cell1);
+    row1.appendChild(cell2);
+    var row2 = document.createElement('tr');
+    var cell3 = document.createElement('td');
+    cell3.appendChild(version_changer_label);
+    cell3.setAttribute('style', 'padding:5px');
+    var cell4 = document.createElement('td');
+    cell4.appendChild(version_changer);
+    cell4.setAttribute('style', 'padding:5px');
+    row2.appendChild(cell3);
+    row2.appendChild(cell4);
+    var row3 = document.createElement('tr');
+    var cell5 = document.createElement('td');
+    cell5.setAttribute('colspan', '2');
+    cell5.setAttribute('style', 'text-align:center;');
+    cell5.appendChild(run_button);
+    row3.appendChild(cell5);
+    table.appendChild(row1);
+    table.appendChild(row2);
+    table.appendChild(row3);
+    textarea2.setAttribute('rows', '8');
+    content.appendChild(header);
+    content.appendChild(textarea);
+    content.appendChild(table);
+    content.appendChild(textarea2);
 }
 
 function load_file(file_id, file_url_encoded, extension)
@@ -224,63 +403,30 @@ function load_file(file_id, file_url_encoded, extension)
     var file_field = document.getElementById("file_"+file_id);
     var content = document.getElementById("content");
     content.innerHTML = "";
-    var display = document.getElementById.("load_"+file_id).style.display;
-    display = "inline-block";
+    document.getElementById("load_"+file_id).style.display = "inline-block";
     if(file_list.includes(extension)){
     $.ajax({
             url: host_url + load_file_url.replace(/1/,file_id),
             type:'GET',
             dataType: 'json',
             success:function(response){
-                var textarea = document.createElement("textarea");
-                var header = document.createElement("h4");
-                var save_button = document.createElement("button");
-                var delete_button = document.createElement("button");
-                var theme_changer = document.createElement("select");
-                var theme_changer_label = document.createElement("label");
-                theme_changer_label.setAttribute('class', 'form-control');
-                theme_changer_label.setAttribute('style','float:right;margin-right:10px;max-width:250px;z-index:1000;, box-shadow:none; -webkit-box-shadow:none; width:fit-content;border:none;');
-                theme_changer_label.innerHTML = "Editor Theme: ";
-                theme_changer.setAttribute('class','form-control');
-                theme_changer.setAttribute('id','theme_selector');
-                theme_changer.setAttribute('onchange','selectTheme()');
-                theme_changer.setAttribute('style','float:right;margin-right:10px;max-width:250px;z-index:1000;');
-                for(option in theme_options)
-                {
-                    var option_div = document.createElement("option");
-                    option_div.value = theme_options[option];
-                    option_div.text = theme_options[option];
-                    theme_changer.add(option_div);
-                }
-                save_button.setAttribute('class','btn btn-success');
-                delete_button.setAttribute('class','btn btn-danger');
-                save_button.setAttribute('style','float:right;margin-right:10px;');
-                delete_button.setAttribute('style','float:right;margin-right:10px;');
-                save_button.setAttribute('onclick','save_file(id)'.replace('id',file_id));
-                delete_button.setAttribute('onclick','delete_file(id)'.replace('id',file_id));
-                save_button.innerHTML = 'SAVE';
-                delete_button.innerHTML = 'DELETE';
-                header.innerHTML = "Code Editor:";
-                textarea.setAttribute('id','codearea');
-                textarea.setAttribute('style','margin:20px;');
-                content.appendChild(delete_button);
-                content.appendChild(save_button);
-                content.appendChild(theme_changer);
-                content.appendChild(theme_changer_label);
-                content.appendChild(header);
-                content.appendChild(textarea);
+                addEditor(file_id);
+                if(extension == 'html')
+                    addHtmlControls(file_url_encoded);
+                if(exec_api_list.includes(extension))
+                    addControls(extension);
                 var myTextarea=document.getElementById('codearea')
                 editor = CodeMirror.fromTextArea(myTextarea, {
                     lineNumbers: true,
                 });
                 editor.setValue(response['data'].toString());
-                display = "none";
+                document.getElementById("load_"+file_id).style.display = "none";
             },
             error:function(error)
             {
                 alert(error.responseJSON['message']);
                 console.log(error.responseJSON);
-                display = "none";
+                document.getElementById("load_"+file_id).style.display = "none";
             }
             })
     }
@@ -293,7 +439,7 @@ function load_file(file_id, file_url_encoded, extension)
         iframe.setAttribute('height', '600px');
         iframe.setAttribute('allowfullscreen', 'true');
         content.appendChild(iframe);
-        display = "none";
+        document.getElementById("load_"+file_id).style.display = "none";
     }
     else if(music_list.includes(extension)) {
         var audio = document.createElement("audio");
@@ -308,7 +454,7 @@ function load_file(file_id, file_url_encoded, extension)
 		audio.appendChild(source);
 		center.appendChild(audio);
         content.appendChild(center);
-        display = "none";
+        document.getElementById("load_"+file_id).style.display = "none";
     }
     else if(video_list.includes(extension)) {
         var video = document.createElement("video");
@@ -323,7 +469,7 @@ function load_file(file_id, file_url_encoded, extension)
 		video.appendChild(source);
 		center.appendChild(video);
         content.appendChild(center);
-        display = "none";
+        document.getElementById("load_"+file_id).style.display = "none";
     }
     else if(img_list.includes(extension)) {
         var img = document.createElement("img");
@@ -332,7 +478,7 @@ function load_file(file_id, file_url_encoded, extension)
         img.setAttribute('style', 'max-width:100%; height:auto');
 		center.appendChild(img);
         content.appendChild(center);
-        display = "none";
+        document.getElementById("load_"+file_id).style.display = "none";
     }
     else {
         var iframe = document.createElement("iframe");
@@ -342,7 +488,7 @@ function load_file(file_id, file_url_encoded, extension)
         iframe.setAttribute('height', '600px');
         iframe.setAttribute('allowfullscreen', 'true');
         content.appendChild(iframe);
-        display = "none";
+        document.getElementById("load_"+file_id).style.display = "none";
     }
 }
 
