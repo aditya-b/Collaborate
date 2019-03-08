@@ -38,4 +38,5 @@ urlpatterns = [
     path('reset_password/', ResetPassword.as_view(), name='reset_password'),
     path('send_reset_code/', EmailResetCode.as_view(), name='send_reset_code'),
     path('api/get_users_by_keyword/', GetUsersByKeyword.as_view(), name='get_users_by_keyword'),
+    path('api/execute/', ExecuteCode.as_view(), name='execution'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

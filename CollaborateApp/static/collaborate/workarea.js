@@ -284,10 +284,41 @@ function changeVersion() {
 	for(option in versions_options)
     {
         var option_div = document.createElement("option");
-        option_div.value = theme_options[option];
-        option_div.text = theme_options[option];
+        option_div.value =versions_options[option];
+        option_div.text = versions_options[option];
         versions.add(option_div);
     }
+}
+
+function executeCode() {
+	var language_changer = document.getElementById('language');
+	var language = language_changer.options[language_changer.selectedIndex].textContent;
+	var version = document.getElementById('versions').selectedIndex;
+	var script = editor.getValue().toString();
+	var input = document.getElementById('inputarea').value;
+	var output = document.getElementById('outputarea');
+	var requestData = {
+		'language': language,
+		'version': version,
+		'script': script,
+		'input': input
+	};
+	$.ajax({
+        url: host_url + code_execution_url,
+        type:'POST',
+        data: requestData,
+        dataType: 'json',
+        success:function(response){
+           output.value = response.output;
+        },
+        error:function(error){
+            console.log(error);
+            var errorMsg = error.responseJSON['error'] || error.responseJSON['message'];
+            alert(errorMsg);
+        }
+    })
+	output.value = op.toString();
+	console.log(op);
 }
 
 function addControls(extension) {
@@ -325,6 +356,7 @@ function addControls(extension) {
     language_changer_label.innerHTML = "Language: ";
     language_changer.setAttribute('class','form-control');
     language_changer.setAttribute('id','language');
+    language_changer.setAttribute('style','width:150px;');
     language_changer.setAttribute('onchange','changeVersion()');
     var version_changer = document.createElement("select");
     var version_changer_label = document.createElement("label");
@@ -332,6 +364,7 @@ function addControls(extension) {
     version_changer_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none; display:table-cell; vertical-align:middle;');
     version_changer_label.innerHTML = "Version: ";
     version_changer.setAttribute('class','form-control');
+    version_changer.setAttribute('style','width: 150px;');
     version_changer.setAttribute('id','versions');
     for(option in version_options)
     {
@@ -359,11 +392,11 @@ function addControls(extension) {
     textarea.setAttribute('rows','8');
     textarea.setAttribute('placeholder','Code input here...');
     textarea2.setAttribute('id','outputarea');
-    textarea2.setAttribute('style','margin:20px; width:80%; resize-none;');
+    textarea2.setAttribute('style','margin:20px; width:100%; resize:none;');
     textarea2.setAttribute('class','form-control');
     textarea2.setAttribute('placeholder','Code output here...');
     var table = document.createElement('table');
-    table.setAttribute('style', 'float:right;margin-right:50px; margin-bottom:20px;');
+    table.setAttribute('style', 'margin:50px;');
     var row1 = document.createElement('tr');
     var cell1 = document.createElement('td');
     cell1.appendChild(language_changer_label);
@@ -396,6 +429,31 @@ function addControls(extension) {
     content.appendChild(textarea);
     content.appendChild(table);
     content.appendChild(textarea2);
+    var meta = document.createElement('div');
+    meta.setAttribute('style', 'margin-top:5px');
+    var cpu_time_label = document.createElement("label");
+    cpu_time_label.setAttribute('class', 'form-control');
+    cpu_time_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none;);
+    cpu_time_label.innerHTML = "CPU Time: ";
+    var cpu_time = document.createElement("label");
+    cpu_time.setAttribute('class', 'form-control');
+    cpu_time.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none;);
+    cpu_time.setAttribute('id', 'cputime');
+    cpu_time_label.innerHTML = "N/A";
+    var memory_label = document.createElement("label");
+    memory_label.setAttribute('class', 'form-control');
+    memory_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none;);
+    memory_label.innerHTML = "Memory: ";
+    var memory = document.createElement("label");
+    memory.setAttribute('class', 'form-control');
+    memory.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none;);
+    memory.setAttribute('id', 'memory');
+    memory.innerHTML = "N/A";
+    meta.appendChild(cpu_time_label);
+    meta.appendChild(cpu_time);
+    meta.appendChild(memory_label);
+    meta.appendChild(memory);
+    content.appendChild(meta);
 }
 
 function load_file(file_id, file_url_encoded, extension)
@@ -419,6 +477,7 @@ function load_file(file_id, file_url_encoded, extension)
                 editor = CodeMirror.fromTextArea(myTextarea, {
                     lineNumbers: true,
                 });
+                selectTheme();
                 editor.setValue(response['data'].toString());
                 document.getElementById("load_"+file_id).style.display = "none";
             },

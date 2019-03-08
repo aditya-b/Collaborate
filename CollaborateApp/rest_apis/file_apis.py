@@ -8,6 +8,10 @@ from CollaborateApp.models import Files
 from CollaborateApp.serializers import FileSerializer
 
 import boto3
+from os import environ
+from json import dumps
+from requests import post
+
 s3client = boto3.client(
         's3',
         aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
@@ -135,3 +139,33 @@ class DownloadFile(APIView):
             return JsonResponse({'message': 'Restricted Access'}, status=403)
         except ObjectDoesNotExist:
             return JsonResponse({'message': 'File not found!'}, status=404)
+
+
+class ExecuteCode(APIView):
+    def post(self, request, *args, **kwargs):
+        if type(request.user) == AnonymousUser:
+            return JsonResponse({'message': 'Restricted Access'}, status=403)
+        try:
+            script = request.POST['script']
+            language = request.POST['language']
+            version = str(request.POST['version'])
+            stdin = request.POST['input']
+            clientId = environ['execution_client_id']
+            clientSecret = environ['execution_client_secret']
+            headers = {'Content-type': 'application/json'}
+            execution_url = environ['execution_url']
+            data = {
+                'script': script,
+                'language': language,
+                'version': version,
+                'stdin': stdin,
+                'clientId': clientId,
+                'clientSecret': clientSecret
+            }
+            json_data = dumps(data)
+            response = post(execution_url, data=json_data, headers=headers)
+            json_response = response.json()
+            status_code = json_response.pop('statusCode')
+            return JsonResponse(json_response, status=status_code)
+        except Exception as e:
+            return JsonResponse({'message': str(e)}, status=404)
