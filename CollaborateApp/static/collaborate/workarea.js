@@ -297,12 +297,24 @@ function executeCode() {
 	var script = editor.getValue().toString();
 	var input = document.getElementById('inputarea').value;
 	var output = document.getElementById('outputarea');
+	var cpuTime = document.getElementById('cputime');
+	var memory = document.getElementById('memory');
+	var loader = document.getElementById('execution_loader');
+	var loading_text = document.getElementById('execution_status');
 	var requestData = {
 		'language': language,
 		'version': version,
 		'script': script,
-		'input': input
+		'input': input,
+		'csrfmiddlewaretoken': getCSRF()
 	};
+	loader.className = loader.className.replace('ok', 'refresh');
+	loader.className = loader.className.replace('remove', 'refresh');
+	loader.style.display = "inline-block";
+	loading_text.style.color = "red";
+	loader.style.color = "red";
+	loading_text.innerHTML = "In progress  ";
+	loader.className = loader.className.replace('loads', 'load');
 	$.ajax({
         url: host_url + code_execution_url,
         type:'POST',
@@ -310,15 +322,27 @@ function executeCode() {
         dataType: 'json',
         success:function(response){
            output.value = response.output;
+           cpuTime.innerHTML = response.cpuTime + ' s';
+           memory.innerHTML = (parseInt(response.memory)/1000) + 'kB';
+           loading_text.style.color = "green";
+           loader.style.color = "green";
+           loading_text.innerHTML = "Executed  ";
+           loader.className = loader.className.replace('load', 'loads');
+           loader.className = loader.className.replace('refresh', 'ok');
         },
         error:function(error){
             console.log(error);
-            var errorMsg = error.responseJSON['error'] || error.responseJSON['message'];
+            var errorMsg = error.responseJSON['error'] || error.responseJSON['message'] || error.responseJSON['detail'];
             alert(errorMsg);
+            loading_text.innerHTML = "Error occurred!";
+            loader.className = loader.className.replace('load', 'loads');
+            loader.className = loader.className.replace('refresh', 'remove');
         }
-    })
-	output.value = op.toString();
-	console.log(op);
+    });
+}
+
+function getCSRF() {
+	return document.cookie.split('=').pop();
 }
 
 function addControls(extension) {
@@ -387,14 +411,26 @@ function addControls(extension) {
     header.innerHTML = "Execution options:";
     header.setAttribute('style', 'margin-top:25px;')
     textarea.setAttribute('id','inputarea');
-    textarea.setAttribute('style','margin:20px;width:50%;float:left;resize:none;');
+    textarea.setAttribute('style','margin:20px;width:50%;float:left;resize:none; background:black; color:white; font-family:monospace;');
     textarea.setAttribute('class','form-control');
     textarea.setAttribute('rows','8');
     textarea.setAttribute('placeholder','Code input here...');
     textarea2.setAttribute('id','outputarea');
-    textarea2.setAttribute('style','margin:20px; width:100%; resize:none;');
+    textarea2.setAttribute('style','margin:20px; width:100%; resize:none;background:black; color:white; font-family:monospace;');
     textarea2.setAttribute('class','form-control');
+    textarea2.setAttribute('readonly', 'true');
     textarea2.setAttribute('placeholder','Code output here...');
+    var loading_div = document.createElement("h4");
+    loading_div.innerHTML = 'Execution status:  ';
+    loading_div.setAttribute('style', 'display:inline');
+    var loading_text = document.createElement("h5");
+    loading_text.setAttribute('style', 'display: inline; color:black');
+    loading_text.setAttribute('id', 'execution_status');
+    var loader = document.createElement('h5');
+    loader.setAttribute('style', 'display:none; color:black;');
+    loader.setAttribute('class', 'glyphicon glyphicon-refresh small loads');
+    loader.setAttribute('id', 'execution_loader');
+    loading_text.innerHTML = "N/A";
     var table = document.createElement('table');
     table.setAttribute('style', 'margin:50px;');
     var row1 = document.createElement('tr');
@@ -428,25 +464,28 @@ function addControls(extension) {
     content.appendChild(header);
     content.appendChild(textarea);
     content.appendChild(table);
+    content.appendChild(loading_div);
+    content.appendChild(loading_text);
+    content.appendChild(loader);
     content.appendChild(textarea2);
     var meta = document.createElement('div');
     meta.setAttribute('style', 'margin-top:5px');
     var cpu_time_label = document.createElement("label");
     cpu_time_label.setAttribute('class', 'form-control');
-    cpu_time_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none;);
+    cpu_time_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none; display:inline;');
     cpu_time_label.innerHTML = "CPU Time: ";
     var cpu_time = document.createElement("label");
     cpu_time.setAttribute('class', 'form-control');
-    cpu_time.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none;);
+    cpu_time.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none; display:inline;');
     cpu_time.setAttribute('id', 'cputime');
-    cpu_time_label.innerHTML = "N/A";
+    cpu_time.innerHTML = "N/A";
     var memory_label = document.createElement("label");
     memory_label.setAttribute('class', 'form-control');
-    memory_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none;);
+    memory_label.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none; display:inline;');
     memory_label.innerHTML = "Memory: ";
     var memory = document.createElement("label");
     memory.setAttribute('class', 'form-control');
-    memory.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none;);
+    memory.setAttribute('style','box-shadow:none; -webkit-box-shadow:none; width:fit-content; border:none; display:inline;');
     memory.setAttribute('id', 'memory');
     memory.innerHTML = "N/A";
     meta.appendChild(cpu_time_label);
