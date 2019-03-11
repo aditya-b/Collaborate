@@ -579,14 +579,15 @@ function load_file(file_id, file_url_encoded, extension)
         document.getElementById("load_"+file_id).style.display = "none";
     }
     else {
+        download_file(file_id);
+    }
+    if(extension === 'html') {
         var iframe = document.createElement("iframe");
-        var url_file = "http://docs.google.com/viewer?url=" + atob(file_url_encoded) + "&embedded=true";
-        iframe.setAttribute('src', url_file);
+        iframe.setAttribute('src', atob(file_url_encoded));
         iframe.setAttribute('width', '100%');
         iframe.setAttribute('height', '600px');
         iframe.setAttribute('allowfullscreen', 'true');
         content.appendChild(iframe);
-        document.getElementById("load_"+file_id).style.display = "none";
     }
 }
 
