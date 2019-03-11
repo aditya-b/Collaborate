@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="Added HTML execution">
+    <list default="true" id="f061921e-1372-4c8a-bdbc-f8446bc0021c" name="Default" comment="CSRF Token bug fix while saving file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="158" column="39" lean-forward="true" selection-start-line="158" selection-start-column="39" selection-end-line="158" selection-end-column="39" />
+            <state relative-caret-position="119">
+              <caret line="541" column="35" selection-start-line="541" selection-start-column="35" selection-end-line="541" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -26,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/signup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="350">
               <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
             </state>
           </provider>
@@ -35,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2771">
+            <state relative-caret-position="327">
               <caret line="163" column="69" selection-start-line="163" selection-start-column="69" selection-end-line="163" selection-end-column="69" />
             </state>
           </provider>
@@ -44,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
+            <state relative-caret-position="255">
               <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
@@ -64,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+            <state relative-caret-position="344">
+              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -151,8 +150,8 @@
         <option value="$PROJECT_DIR$/CollaborateApp/templates/base.html" />
         <option value="$PROJECT_DIR$/CollaborateApp/urls.py" />
         <option value="$PROJECT_DIR$/CollaborateApp/templates/home.html" />
-        <option value="$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js" />
         <option value="$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py" />
+        <option value="$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js" />
       </list>
     </option>
   </component>
@@ -397,7 +396,21 @@
       <option name="project" value="LOCAL" />
       <updated>1552279096592</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Modified file edit to POST">
+      <created>1552291360058</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552291360058</updated>
+    </task>
+    <task id="LOCAL-00019" summary="CSRF Token bug fix while saving file">
+      <created>1552291766042</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1552291766042</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -416,6 +429,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49456522" visible="true" weight="0.25520834" />
       <window_info id="Structure" order="1" sideWeight="0.5054348" side_tool="true" weight="0.14806548" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
       <window_info anchor="bottom" id="Run" order="2" type="SLIDING" weight="0.3289689" />
@@ -480,7 +494,9 @@
     <MESSAGE value="Added Execution Backend" />
     <MESSAGE value="UI Changes for execution status" />
     <MESSAGE value="Added HTML execution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added HTML execution" />
+    <MESSAGE value="Modified file edit to POST" />
+    <MESSAGE value="CSRF Token bug fix while saving file" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSRF Token bug fix while saving file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -790,39 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="158" column="39" lean-forward="true" selection-start-line="158" selection-start-column="39" selection-end-line="158" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2771">
-          <caret line="163" column="69" selection-start-line="163" selection-start-column="69" selection-end-line="163" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -832,11 +815,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CollaborateApp/rest_apis/file_apis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+        <state relative-caret-position="344">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#5;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="163" column="69" selection-start-line="163" selection-start-column="69" selection-end-line="163" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollaborateApp/static/collaborate/workarea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="541" column="35" selection-start-line="541" selection-start-column="35" selection-end-line="541" selection-end-column="35" />
         </state>
       </provider>
     </entry>

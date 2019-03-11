@@ -159,9 +159,7 @@ function save_file(file_id)
                 },
             dataType: 'json',
             success:function(response){
-                alert(response.message)
-                if(document.getElementById('htmlexec'))
-                    document.getElementById('htmlexec').src = document.getElementById('htmlexec').src;
+                alert(response.message);
                 document.getElementById("load_"+file_id).style.display = "none";
             },
             error:function(error){
@@ -266,10 +264,6 @@ function addEditor(file_id){
     content.appendChild(theme_changer_label);
     content.appendChild(header);
     content.appendChild(textarea);
-}
-
-function addHtmlControls(file_url_encoded) {
-
 }
 
 function changeVersion() {
@@ -500,19 +494,25 @@ function addControls(extension) {
     content.appendChild(meta);
 }
 
-function addHtmlControls(file_url_encoded) {
+function updateIFrame() {
+	var frame = document.getElementById('htmlexec');
+	var frameDoc = frame.contentWindow.document || frame.contentDocument;
+	frameDoc.documentElement.innerHTML = editor.getValue().toString();
+}
+
+function addHtmlControls() {
 	var iframe = document.createElement("iframe");
 	var header = document.createElement("h4");
-	header.innerHTML = "Preview: (Save your changes to refresh the preview)";
+	header.innerHTML = "Preview: (Move out of the editor to refresh the preview)";
     header.setAttribute('style', 'margin:25px 0px;')
     iframe.setAttribute('id', 'htmlexec');
-    iframe.setAttribute('src', atob(file_url_encoded));
     iframe.setAttribute('width', '100%');
     iframe.setAttribute('height', '600px');
     iframe.setAttribute('allowfullscreen', 'true');
     iframe.setAttribute('style', 'border:2px solid black; border-radius:10px;')
     content.appendChild(header);
     content.appendChild(iframe);
+	editor.on('blur', () => updateIFrame());
 }
 
 function load_file(file_id, file_url_encoded, extension)
@@ -528,8 +528,6 @@ function load_file(file_id, file_url_encoded, extension)
             dataType: 'json',
             success:function(response){
                 addEditor(file_id);
-                if(extension == 'html')
-                    addHtmlControls(file_url_encoded);
                 if(exec_api_list.includes(extension))
                     addControls(extension);
                 var myTextarea=document.getElementById('codearea')
@@ -538,6 +536,11 @@ function load_file(file_id, file_url_encoded, extension)
                 });
                 selectTheme();
                 editor.setValue(response['data'].toString());
+                if(extension == 'html')
+                {
+                    addHtmlControls(file_url_encoded);
+                    updateIFrame();
+                }
                 document.getElementById("load_"+file_id).style.display = "none";
             },
             error:function(error)
