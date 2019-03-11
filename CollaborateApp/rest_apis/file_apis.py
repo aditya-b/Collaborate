@@ -52,7 +52,7 @@ class GetFiles(APIView):
 
 
 class EditFile(APIView):
-    def get(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         if type(request.user) == AnonymousUser:
             return JsonResponse({'message': 'Restricted Access'}, status=403)
         try:
@@ -62,7 +62,7 @@ class EditFile(APIView):
             for user in users:
                 if user['username'] == request.user.username:
                     try:
-                        set_data_to_s3(files.url.name, request.GET['content'])
+                        set_data_to_s3(files.url.name, request.POST['content'])
                         return JsonResponse({'message': 'File is edited successfully!'}, status=200)
                     except Exception as e:
                         return JsonResponse({'message': 'Error: '+ e.__str__() + '\n Try downloading the file instead.'}, status=404)

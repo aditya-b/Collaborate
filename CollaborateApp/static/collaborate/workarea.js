@@ -152,11 +152,13 @@ function save_file(file_id)
     document.getElementById("load_"+file_id).style.display = "inline-block";
     $.ajax({
             url: host_url + save_file_url.replace(1,file_id),
-            type:'GET',
+            type:'POST',
             data:{ 'content': editor.getValue().toString()},
             dataType: 'json',
             success:function(response){
                 alert(response.message)
+                if(document.getElementById('htmlexec'))
+                    document.getElementById('htmlexec').src = document.getElementById('htmlexec').src;
                 document.getElementById("load_"+file_id).style.display = "none";
             },
             error:function(error){
@@ -495,6 +497,21 @@ function addControls(extension) {
     content.appendChild(meta);
 }
 
+function addHtmlControls(file_url_encoded) {
+	var iframe = document.createElement("iframe");
+	var header = document.createElement("h4");
+	header.innerHTML = "Preview: (Save your changes to refresh the preview)";
+    header.setAttribute('style', 'margin:25px 0px;')
+    iframe.setAttribute('id', 'htmlexec');
+    iframe.setAttribute('src', atob(file_url_encoded));
+    iframe.setAttribute('width', '100%');
+    iframe.setAttribute('height', '600px');
+    iframe.setAttribute('allowfullscreen', 'true');
+    iframe.setAttribute('style', 'border:2px solid black; border-radius:10px;')
+    content.appendChild(header);
+    content.appendChild(iframe);
+}
+
 function load_file(file_id, file_url_encoded, extension)
 {
     var file_field = document.getElementById("file_"+file_id);
@@ -580,14 +597,6 @@ function load_file(file_id, file_url_encoded, extension)
     }
     else {
         download_file(file_id);
-    }
-    if(extension === 'html') {
-        var iframe = document.createElement("iframe");
-        iframe.setAttribute('src', atob(file_url_encoded));
-        iframe.setAttribute('width', '100%');
-        iframe.setAttribute('height', '600px');
-        iframe.setAttribute('allowfullscreen', 'true');
-        content.appendChild(iframe);
     }
 }
 
