@@ -153,7 +153,10 @@ function save_file(file_id)
     $.ajax({
             url: host_url + save_file_url.replace(1,file_id),
             type:'POST',
-            data:{ 'content': editor.getValue().toString()},
+            data:{
+                'content': editor.getValue().toString(),
+                'csrfmiddlewaretoken': getCSRF()
+                },
             dataType: 'json',
             success:function(response){
                 alert(response.message)
